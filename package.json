@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.0.0-rc14",
-    "vitepress": "^1.2.0"
+    "vitepress": "^1.2.0",
+    "vue": "^3.2.0"
   }
 }
