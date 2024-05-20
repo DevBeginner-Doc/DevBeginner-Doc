@@ -15,6 +15,9 @@ jobs:
     - name: Checkout lastest code
       uses: actions/checkout@v4
     
+    - name: Fetch package-lock.json from ArkStation
+      run: scp -o StrictHostKeyChecking=no ${{ secrets.DC_USER }}@${{ secrets.DC_HOST }}:/var/www/html-doc/package-lock.json ./package-lock.json
+      
     - name: Use Node.js 20 to build
       uses: actions/setup-node@v3
       with:
@@ -22,7 +25,7 @@ jobs:
     - run: npm install
     - run: npm run docs:build --if-present
 
-    - name: deploy package to server
+    - name: Deploy package to ArkStation
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest
       with:
         host: ${{ secrets.DC_HOST }}
