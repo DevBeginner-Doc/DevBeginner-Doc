@@ -22,6 +22,7 @@ export default defineConfig({
     ssr: {
       noExternal: [
         '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading',
         '@nolebase/ui'
       ],
     },
@@ -29,7 +30,7 @@ export default defineConfig({
 
   themeConfig: {
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' }
     ],
 
     search: {

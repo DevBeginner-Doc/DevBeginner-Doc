@@ -5,7 +5,8 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "vitepress": "^1.2.0",
-    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.0.0-rc14"
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.0.0-rc14",
+    "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.0.0-rc14",
+    "vitepress": "^1.2.0"
   }
 }
