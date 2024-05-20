@@ -35,4 +35,4 @@ jobs:
         scp: |
           ./dist/* => /var/www/html-doc/dist/
         last_ssh: |
-          sudo systemctl restart apache2.service
+          sudo systemctl reload apache2.service
