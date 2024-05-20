@@ -3,7 +3,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 export const zh = defineConfig({
     lang: 'zh-Hans',
     title: "DevBeginner Doc",
-    description: "A help document for programming beginners.",
+    description: "面向编程初学者的帮助文档",
     themeConfig: {
         //顶部导航栏选项
         nav: nav(),
@@ -49,17 +49,22 @@ export const zh = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
     return [
-        { text: 'Home', link: '/' },
+        { text: '首页', link: '/' },
+        { text: '序言', link: '/foreword' },
     ]
 }
 
 function sidebar(): DefaultTheme.SidebarItem[] {
     return [
         {
-            text: 'Examples',
-            items: [
-            ]
+            text: '序言',
+            link: '/foreword'
         },
+        // {
+        //     text: 'Example',
+        //     items: [
+        //     ]
+        // },
     ]
 }
 
