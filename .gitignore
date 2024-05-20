@@ -131,3 +131,6 @@ dist
 
 # vitepress cache
 .vitepress/cache
+
+# npm package-lock
+package-lock.json
