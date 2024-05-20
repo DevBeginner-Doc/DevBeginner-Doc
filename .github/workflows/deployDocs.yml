@@ -10,18 +10,15 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
     - name: Checkout lastest code
       uses: actions/checkout@v4
     
-    - name: Use Node.js ${{ matrix.node-version }} to build
+    - name: Use Node.js 20 to build
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 20
         cache: 'npm'
     - run: npm ci
     - run: npm run docs:build --if-present
