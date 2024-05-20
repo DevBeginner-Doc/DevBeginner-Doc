@@ -12,14 +12,14 @@ export const zh = defineConfig({
         sidebar: sidebar(),
 
         editLink: {
-            pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+            pattern: 'https://github.com/FrexCheat/DevBeginner-Doc/edit/main/docs/:path',
             text: '在 GitHub 上编辑此页面'
         },
 
-        footer: {
-            message: '基于 MIT 许可发布',
-            copyright: `版权所有 © 2024 Frex`
-        },
+        // footer: {
+        //     message: '基于 MIT 许可发布',
+        //     copyright: `版权所有 © 2024 Frex`
+        // },
 
         docFooter: {
             prev: '上一页',
@@ -50,7 +50,6 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
     return [
         { text: 'Home', link: '/' },
-        { text: 'Examples', link: '/markdown-examples' }
     ]
 }
 
@@ -59,8 +58,6 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         {
             text: 'Examples',
             items: [
-                { text: 'Markdown Examples', link: '/markdown-examples' },
-                { text: 'Runtime API Examples', link: '/api-examples' }
             ]
         },
     ]
