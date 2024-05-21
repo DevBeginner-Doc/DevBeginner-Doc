@@ -9,9 +9,6 @@ hero:
     - theme: brand
       text: 序言
       link: /foreword
-  #   - theme: alt
-  #     text: API Examples
-  #     link: /api-examples
 
 # features:
 #   - title: Feature A
@@ -21,4 +18,3 @@ hero:
 #   - title: Feature C
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 # ---
-
