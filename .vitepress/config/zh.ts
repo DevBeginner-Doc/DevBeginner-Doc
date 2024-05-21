@@ -16,11 +16,6 @@ export const zh = defineConfig({
             text: '在 GitHub 上编辑此页面'
         },
 
-        // footer: {
-        //     message: '基于 MIT 许可发布',
-        //     copyright: `版权所有 © 2024 Frex`
-        // },
-
         docFooter: {
             prev: '上一页',
             next: '下一页'
@@ -60,11 +55,6 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             text: '序言',
             link: '/foreword'
         },
-        // {
-        //     text: 'Example',
-        //     items: [
-        //     ]
-        // },
     ]
 }
 
