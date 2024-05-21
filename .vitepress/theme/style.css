@@ -68,6 +68,9 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+
+  --vp-font-family-base: Noto Sans SC;
+  --vp-font-family-mono: Fira Code;
 }
 
 /**
@@ -132,6 +135,10 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+/**
+ *Component: readabilities
+ * -------------------------------------------------------------------------- */
 
 .VPSocialLinks.VPNavBarSocialLinks.social-links {
   margin-right: 0;
