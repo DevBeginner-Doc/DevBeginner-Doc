@@ -11,11 +11,11 @@ hero:
   actions:
     - theme: brand
       text: 编写初衷
-      link: /foreword/intention
+      link: /Foreword/intention
 
     - theme: brand
       text: 入门须知
-      link: /foreword/prerequisites
+      link: /Foreword/prerequisites
 
 # features:
 #   - title: Feature A
