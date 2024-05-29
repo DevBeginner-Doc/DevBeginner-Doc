@@ -45,8 +45,8 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
     return [
         { text: '首页', link: '/' },
-        { text: '初衷', link: '/foreword/intention' },
-        { text: '入门须知', link: '/foreword/prerequisites' },
+        { text: '初衷', link: '/Foreword/intention' },
+        { text: '入门须知', link: '/Foreword/prerequisites' },
     ]
 }
 
@@ -58,11 +58,11 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             items: [
                 {
                     text: '编写初衷',
-                    link: '/foreword/intention',
+                    link: '/Foreword/intention',
                 },
                 {
                     text: '入门须知',
-                    link: '/foreword/prerequisites',
+                    link: '/Foreword/prerequisites',
                 },
             ]
         },
