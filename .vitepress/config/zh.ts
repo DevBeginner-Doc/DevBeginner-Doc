@@ -47,6 +47,7 @@ function nav(): DefaultTheme.NavItem[] {
         { text: '首页', link: '/' },
         { text: '初衷', link: '/foreword/intention' },
         { text: '入门须知', link: '/foreword/prerequisites' },
+        { text: 'devc++测试，稍后删' ,link:'\\Environment\\c-cpp\\Dev-c++.md'}
     ]
 }
 
