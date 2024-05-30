@@ -143,3 +143,15 @@
 .VPSocialLinks.VPNavBarSocialLinks.social-links {
   margin-right: 0;
 }
+
+.responsive-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.responsive-images img {
+  flex: 1 1 calc(50% - 10px);
+  max-width: 70%;
+  max-height: 70%;
+}
