@@ -56,14 +56,108 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             text: '序言',
             collapsed: false,
             items: [
+                { text: '编写初衷', link: '/Foreword/intention', },
+                { text: '入门须知', link: '/Foreword/prerequisites', },
+            ]
+        },
+        {
+            text: '环境搭建',
+            collapsed: false,
+            items: [
+                { text: '引入', link: '/Environment/introduction' },
+                { text: '前置知识', link: '/Environment/pre-knowledges' },
                 {
-                    text: '编写初衷',
-                    link: '/Foreword/intention',
+                    text: 'C/C++',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Environment/c-cpp/overview' },
+                        { text: 'Dev C++', link: '/Environment/c-cpp/bloodshed-devcpp' },
+                        { text: '小熊猫Dev C++', link: '/Environment/c-cpp/panda-devcpp' },
+                        { text: 'CodeBlocks', link: '/Environment/c-cpp/codeblocks' },
+                        { text: 'Visual Studio', link: '/Environment/c-cpp/visual-studio' },
+                        { text: 'Visual Studio Code', link: '/Environment/c-cpp/vs-code' },
+                        { text: 'Sublime Text', link: '/Environment/c-cpp/sublime-text' },
+                        { text: 'Vim/Neovim', link: '/Environment/c-cpp/vim-neovim' },
+                    ]
                 },
                 {
-                    text: '入门须知',
-                    link: '/Foreword/prerequisites',
+                    text: 'Java',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Environment/java/overview' },
+                        { text: 'Eclipse', link: '/Environment/java/eclipse' },
+                        { text: 'IntelliJ IDEA', link: '/Environment/java/idea' },
+                        { text: 'Visual Studio Code', link: '/Environment/java/vs-code' },
+                        { text: 'Sublime Text', link: '/Environment/java/sublime-text' },
+                        { text: 'Vim/Neovim', link: '/Environment/java/vim-neovim' },
+                    ]
                 },
+                {
+                    text: 'Python',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Environment/python/overview' },
+                        { text: 'Thonny', link: '/Environment/python/thonny' },
+                        { text: 'PyCharm', link: '/Environment/python/pycharm' },
+                        { text: 'Python IDLE', link: '/Environment/python/py-idle' },
+                        { text: 'Visual Studio Code', link: '/Environment/python/vs-code' },
+                        { text: 'Sublime Text', link: '/Environment/python/sublime-text' },
+                        { text: 'Vim/Neovim', link: '/Environment/python/vim-neovim' },
+                    ]
+                },
+            ]
+        },
+        {
+            text: '语法基础&基础数据结构',
+            collapsed: false,
+            items: [
+                { text: '引入', link: '/Grammar-DataStructure/introduction', },
+                {
+                    text: 'C语言',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Grammar-DataStructure/c/overview', },
+                    ]
+                },
+                {
+                    text: 'C++',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Grammar-DataStructure/cpp/overview', },
+                    ]
+                },
+                {
+                    text: 'Python',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Grammar-DataStructure/python/overview', },
+                    ]
+                },
+                {
+                    text: 'Java',
+                    collapsed: true,
+                    items: [
+                        { text: '概述', link: '/Grammar-DataStructure/java/overview', },
+                    ]
+                },
+            ]
+        },
+        {
+            text: '算法基础',
+            collapsed: false,
+            items: [
+                { text: '引入', link: '/Algorithm/introduction' },
+                { text: 'Hello Algo' },
+                { text: 'Oi Wiki' },
+            ]
+        },
+        {
+            text: 'Linux初阶',
+            collapsed: false,
+            items: [
+                { text: '引入', link: '/Linux/introduction' },
+                { text: '安装', link: '/Linux/install' },
+                { text: '包管理器', link: '/Linux/package-mgr' },
             ]
         },
     ]
