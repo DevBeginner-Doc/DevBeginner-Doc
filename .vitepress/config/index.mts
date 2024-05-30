@@ -4,6 +4,7 @@ import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-p
 
 export default defineConfig({
   cleanUrls: true,
+  lastUpdated: true,
   outDir: 'dist',
   srcDir: 'docs',
 
