@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import footnote from 'markdown-it-footnote'
 import { zh, search as zhSearch } from './zh.ts'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
@@ -7,6 +8,12 @@ export default defineConfig({
   lastUpdated: true,
   outDir: 'dist',
   srcDir: 'docs',
+
+  markdown: {
+    config: (md) => {
+      md.use(footnote)
+    }
+  },
 
   head: [
     [

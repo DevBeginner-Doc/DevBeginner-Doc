@@ -9,6 +9,7 @@
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.0.0-rc14",
     "@nolebase/vitepress-plugin-git-changelog": "^2.0.0-rc14",
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.0.0-rc14",
+    "markdown-it-footnote": "^4.0.0",
     "vitepress": "^1.2.0"
   }
 }
