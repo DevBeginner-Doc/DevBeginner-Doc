@@ -4,7 +4,6 @@ import { zh, search as zhSearch } from './zh.ts'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 export default defineConfig({
-  cleanUrls: true,
   lastUpdated: true,
   outDir: 'dist',
   srcDir: 'docs',
