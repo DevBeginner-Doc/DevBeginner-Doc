@@ -3,7 +3,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { NolebaseHighlightTargetedHeading } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
-import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
+import { NolebaseGitChangelog } from '@nolebase/vitepress-plugin-git-changelog/client'
 import type { Options as NolebaseReadOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
@@ -20,11 +20,12 @@ export default {
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
       'layout-top': () => h(NolebaseHighlightTargetedHeading),
+      'doc-footer-before': () => h(NolebaseGitChangelog),
     })
   },
 
   enhanceApp({ app, router, siteData }) {
-    app.use(NolebaseGitChangelogPlugin);
+    // app.use(NolebaseGitChangelogPlugin);
     app.provide(NolebaseReadInjectionKey, {
       layoutSwitch: {
         defaultMode: 5,
