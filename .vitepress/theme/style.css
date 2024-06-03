@@ -155,3 +155,12 @@
   max-width: 70%;
   max-height: 70%;
 }
+
+#页面历史 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.edit-info {
+  margin-top: 20px;
+}
