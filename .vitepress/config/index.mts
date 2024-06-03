@@ -8,7 +8,6 @@ export default defineConfig({
   lastUpdated: true,
   outDir: 'dist',
   srcDir: 'docs',
-
   markdown: {
     config: (md) => {
       md.use(footnote)
@@ -31,6 +30,10 @@ export default defineConfig({
     [
       'link',
       { href: 'https://fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap', rel: 'stylesheet' }
+    ],
+    [
+      'link',
+      { rel: 'icon', href: '/svg/main-img.svg' }
     ]
   ],
 
@@ -68,6 +71,8 @@ export default defineConfig({
   },
 
   themeConfig: {
+    logo: '/svg/main-img.svg',
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' }
     ],
