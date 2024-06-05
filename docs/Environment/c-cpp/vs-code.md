@@ -12,7 +12,7 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 ## 一切的开始——下载并安装VSCode
 
-进入[Visual Studio Code](https://code.visualstudio.com/)官网，按照图示下载VSCode安装程序，进入下载页面等待几秒钟后便会自动开始下载，如果发现VSCode官网无法进入，你可以选择科学上网 ~~翻墙~~ ，或者使用[这里提供的安装包（链接失效中）]()
+进入[Visual Studio Code](https://code.visualstudio.com/)官网，按照图示下载VSCode安装程序，进入下载页面等待几秒钟后便会自动开始下载，如果发现VSCode官网无法进入，你可以选择科学上网 ~~翻墙~~ ，或者使用**这里提供的安装包（链接失效中）**
 
 安装程序下载完成后，双击打开（最好以管理员身份运行），之后按照安装程序的提示与指引完成安装。
 
@@ -61,9 +61,9 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 ### 方案二
 
-进入[MinGW官网]()
+进入[MinGW官网](https://sourceforge.net/projects/mingw-w64/files/)
 
-如果下载速度过慢或者无法进入该网页，请移步[此处(链接失效中)](https://frexcheat.lanzoul.com/iI2cN1boa2xc)下载（密码：5ifb）
+如果下载速度过慢或者无法进入该网页，请移步**此处(链接失效中)**
 
 # 配置
 
