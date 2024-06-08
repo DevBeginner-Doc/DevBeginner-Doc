@@ -24,7 +24,7 @@ export default defineConfig({
     ],
     [
       'link',
-      { href: 'https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@500&display=swap', rel: 'stylesheet' }
+      { href: 'https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400..900&display=swap', rel: 'stylesheet' }
     ],
     [
       'link',
