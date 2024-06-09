@@ -128,6 +128,35 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+.custom-block-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.custom-block.info {
+  background-color: rgb(73 179 255 / 14%);
+  border-left-color: rgb(73 179 255);
+  border-left-width: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.custom-block.warning {
+  background-color: rgb(234 179 8 / 14%);
+  border-left-color: rgb(234, 179, 8);
+  border-left-width: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.custom-block.danger {
+  background-color: rgb(244 63 94 / 14%);
+  border-left-color: rgb(244, 63, 94);
+  border-left-width: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
@@ -137,12 +166,8 @@
 }
 
 /**
- *Component: readabilities
+ * Element: Images Block
  * -------------------------------------------------------------------------- */
-
-.VPSocialLinks.VPNavBarSocialLinks.social-links {
-  margin-right: 0;
-}
 
 .responsive-images {
   display: flex;
@@ -156,6 +181,18 @@
   max-height: 70%;
 }
 
+/**
+ *Component: readabilities
+ * -------------------------------------------------------------------------- */
+
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}
+
+/**
+ *Component: Gitchangelog
+ * -------------------------------------------------------------------------- */
+
 #页面历史 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -165,6 +202,20 @@
   margin-top: 20px;
 }
 
+/**
+ *Component: VP-Doc
+ * -------------------------------------------------------------------------- */
+
 .vp-doc strong {
   font-weight: 900;
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid #3bc539;
+  background-color: #3bc53914;
+}
+
+.vp-doc blockquote p {
+  font-size: 15px;
+  font-weight: 500;
 }
