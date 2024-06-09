@@ -30,10 +30,12 @@ jobs:
       if: steps.cache-node-modules.outputs.cache-hit == ''
       run: npm install
 
-    - run: npm run docs:build --if-present
+    - name: Build docs
+      run: npm run docs:build --if-present
 
     - name: Deploy package to ArkStation
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+      if: ${{ success() }}
       with:
         host: ${{ secrets.DC_HOST }}
         user: ${{ secrets.DC_USER }}
