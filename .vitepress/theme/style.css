@@ -128,12 +128,64 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+.custom-block-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.custom-block.info {
+  background-color: rgb(73 179 255 / 14%);
+  border-left-color: rgb(73 179 255);
+  border-left-width: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.custom-block.warning {
+  background-color: rgb(234 179 8 / 14%);
+  border-left-color: rgb(234, 179, 8);
+  border-left-width: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.custom-block.danger {
+  background-color: rgb(244 63 94 / 14%);
+  border-left-color: rgb(244, 63, 94);
+  border-left-width: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/**
+ * Element: Images Block
+ * -------------------------------------------------------------------------- */
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  /* 每行最多放两张图片 */
+  gap: 10px;
+  /* 图片之间的间距 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.img-container img {
+  width: 100%;
+  /* 图片宽度占满父容器 */
 }
 
 /**
@@ -144,17 +196,9 @@
   margin-right: 0;
 }
 
-.responsive-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.responsive-images img {
-  flex: 1 1 calc(50% - 10px);
-  max-width: 70%;
-  max-height: 70%;
-}
+/**
+ *Component: Gitchangelog
+ * -------------------------------------------------------------------------- */
 
 #页面历史 {
   font-size: 24px;
@@ -163,4 +207,22 @@
 
 .edit-info {
   margin-top: 20px;
+}
+
+/**
+ *Component: VP-Doc
+ * -------------------------------------------------------------------------- */
+
+.vp-doc strong {
+  font-weight: 900;
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid #3bc539;
+  background-color: #3bc53914;
+}
+
+.vp-doc blockquote p {
+  font-size: 15px;
+  font-weight: 500;
 }
