@@ -169,16 +169,23 @@
  * Element: Images Block
  * -------------------------------------------------------------------------- */
 
-.responsive-images {
-  display: flex;
-  flex-wrap: wrap;
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  /* 每行最多放两张图片 */
   gap: 10px;
+  /* 图片之间的间距 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-.responsive-images img {
-  flex: 1 1 calc(50% - 10px);
-  max-width: 70%;
-  max-height: 70%;
+.img-container img {
+  width: 100%;
+  /* 图片宽度占满父容器 */
 }
 
 /**
