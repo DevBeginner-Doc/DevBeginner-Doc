@@ -1,11 +1,11 @@
-name: Deploy Docs lastest to Server
+name: Pull request Testing CI
 
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,19 +32,3 @@ jobs:
 
     - name: Build docs
       run: npm run docs:build --if-present
-
-    - name: Deploy package to ArkStation
-      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
-      if: ${{ success() }}
-      with:
-        host: ${{ secrets.DC_HOST }}
-        user: ${{ secrets.DC_USER }}
-        pass: ${{ secrets.DC_PASS }}
-        port: ${{ secrets.DC_PORT }}
-        connect_timeout: 10s
-        first_ssh: |
-          rm -rf /var/www/html-doc/dist
-        scp: |
-          ./dist => /var/www/html-doc/
-        last_ssh: |
-          sudo systemctl reload apache2.service
