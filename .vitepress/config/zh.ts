@@ -138,6 +138,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                     collapsed: true,
                     items: [
                         { text: '概述', link: '/Grammar-DataStructure/java/overview', },
+                        { text: '初步体验', link: '/Grammar-DataStructure/java/primer',},
                     ]
                 },
             ]
