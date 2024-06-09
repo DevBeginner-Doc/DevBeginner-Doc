@@ -140,3 +140,10 @@ JDK = JRE + 开发工具集（例如 Javac 编译工具等）
 ### jdk下载
 
 ### jdk安装
+## javaAPI文档
+- API （Application Programming Interface，应用程序编程接口）是 Java 提供的基本编程接口。
+- Java 语言提供了大量的基础类，因此 Oracle 也为这些基础类提供了相应的说明文档，用于告诉开发者如何使用这些类，以及这些类里包含的方法。大多数 Java 书籍中的类的介绍都要参照它来完成，它是编程者经常查阅的资料。
+- Java API 文档，即为 JDK 使用说明书、帮助文档。类似于新华词典
+### 链接
+- jdk17中文版：https://doc.qzxdp.cn/jdk/17/zh/api/index.html
+- jdk21官方版：https://docs.oracle.com/en/java/javase/21/docs/api/help-doc.html
