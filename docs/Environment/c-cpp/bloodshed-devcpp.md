@@ -12,9 +12,9 @@ Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程�
 
 进入DEV-C++库官网，点击"DownLoad"按钮，之后会进入第二个界面，等待倒计时结束，会自动开始下载。如果下载速度过慢或者无法进入该网页，请移步此处下载: https://frexcheat.lanzoul.com/i4b2P1brn3ri  密码:h5v6（推荐网盘下载）
 
-<div class="responsive-images">
-  <img src="/images/Environment/dev_c++/安装2.png" style="width: 50%"/>
-  <img src="/images/Environment/dev_c++/cs1.png" style="width: 50%"/>
+<div class="img-container">
+  <img src="/images/Environment/dev_c++/安装2.png" alt="安装2"/>
+  <img src="/images/Environment/dev_c++/cs1.png" alt="cs1"/>
 </div>
 
 ## 安装
@@ -25,9 +25,10 @@ Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程�
 
 **这里直接先选择English，安装完成时，可以换成中文。然后我们一路下一步**
 
-![1716730038840](/images/Environment/dev_c++/安装2.png)
-
-![1716730078737](/images/Environment/dev_c++/安装3.png)
+<div class="img-container">
+  <img src="/images/Environment/dev_c++/安装2.png" alt="安装2"/>
+  <img src="/images/Environment/dev_c++/安装3.png" alt="安装3"/>
+</div>
 
 **到了这一步，我们需要将我们的下载路径更改（推荐非系统盘），并且最好记着我们的下载路径**
 
