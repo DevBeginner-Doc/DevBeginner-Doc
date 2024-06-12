@@ -1,3 +1,7 @@
+::: warning :construction:WARNING
+本条目仍在积极施工中，可能存在遗漏或不完善的地方
+:::
+
 # 简介
 
 Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程序设计，虽然Dev-C++ 的原始版本（5.11）自2016年之后就没有再更新，但是由于其上手简单，门槛低，依然是较适合新生使用的一款工具。
@@ -12,9 +16,9 @@ Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程�
 
 进入DEV-C++库官网，点击"DownLoad"按钮，之后会进入第二个界面，等待倒计时结束，会自动开始下载。如果下载速度过慢或者无法进入该网页，请移步此处下载: https://frexcheat.lanzoul.com/i4b2P1brn3ri  密码:h5v6（推荐网盘下载）
 
-<div class="responsive-images">
-  <img src="/images/Environment/dev_c++/安装2.png" style="width: 50%"/>
-  <img src="/images/Environment/dev_c++/cs1.png" style="width: 50%"/>
+<div class="img-container">
+  <img src="/images/Environment/dev_c++/安装2.png" alt="安装2"/>
+  <img src="/images/Environment/dev_c++/cs1.png" alt="cs1"/>
 </div>
 
 ## 安装
@@ -25,9 +29,10 @@ Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程�
 
 **这里直接先选择English，安装完成时，可以换成中文。然后我们一路下一步**
 
-![1716730038840](/images/Environment/dev_c++/安装2.png)
-
-![1716730078737](/images/Environment/dev_c++/安装3.png)
+<div class="img-container">
+  <img src="/images/Environment/dev_c++/安装2.png" alt="安装2"/>
+  <img src="/images/Environment/dev_c++/安装3.png" alt="安装3"/>
+</div>
 
 **到了这一步，我们需要将我们的下载路径更改（推荐非系统盘），并且最好记着我们的下载路径**
 
@@ -66,16 +71,14 @@ Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程�
 ## 打开调试功能
 
 1. 打开左上方工具 --> 编译器选项 --> 代码生成/优化 --> 连接器 --> 生成调试信息 --> 选择yes。
-2. 左上方工具 --> 环境选项 --> 勾选如图选项![1716730262663](/images/Environment/dev_c++/编译1.png)
-3. 勾选如图![1716730262663](/images/Environment/dev_c++/调试2.png)
+2. 左上方工具 --> 环境选项 --> 勾选如图选项<br><br>![1716730262663](/images/Environment/dev_c++/编译1.png)
+3. 勾选如图<br><br>![1716730262663](/images/Environment/dev_c++/调试2.png)
 
 ## 如何使用
 
-1. 在需要停止的地方打上断点 ：在对应代码行的左侧点击行号位置![1716730262663](/images/Environment/dev_c++/调试3.png)
-2. 点击`编译且运行`按钮右侧紫色对号图标，便能在下方看到调试台![1716730262663](/images/Environment/dev_c++/调试4.png)
-3. 进行调试
-   我们主要使用的有 下一步（运行该行代码并将标识框下移一行）、跳过（运行剩余全部代码）、单步进入（如果该行代码中含有函数等则进入函数，否则运行该行代码并将标识框下移一行）。
-   同时，当我们点击代码中的变量时，在左侧会同步显示该变量值供我们参考。
+1. 在需要停止的地方打上断点 ：在对应代码行的左侧点击行号位置<br><br>![1716730262663](/images/Environment/dev_c++/调试3.png)
+2. 点击`编译且运行`按钮右侧紫色对号图标，便能在下方看到调试台<br><br>![1716730262663](/images/Environment/dev_c++/调试4.png)
+3. 进行调试<br><br>我们主要使用的有 `下一步（运行该行代码并将标识框下移一行）`、`跳过（运行剩余全部代码）`、`单步进入（如果该行代码中含有函数等则进入函数，否则运行该行代码并将标识框下移一行）`。同时，当我们点击代码中的变量时，在左侧会同步显示该变量值供我们参考。
 
 # 美化界面
 
