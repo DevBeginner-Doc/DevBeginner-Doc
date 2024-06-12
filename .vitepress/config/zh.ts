@@ -72,7 +72,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                     items: [
                         { text: '概述', link: '/Environment/c-cpp/overview' },
                         { text: 'Dev C++', link: '/Environment/c-cpp/bloodshed-devcpp' },
-                        { text: '小熊猫Dev C++', link: '/Environment/c-cpp/panda-devcpp' },
+                        { text: '小熊猫Dev C++', link: '/Environment/c-cpp/red-panda' },
                         { text: 'CodeBlocks', link: '/Environment/c-cpp/codeblocks' },
                         { text: 'Visual Studio', link: '/Environment/c-cpp/visual-studio' },
                         { text: 'Visual Studio Code', link: '/Environment/c-cpp/vs-code' },
@@ -138,8 +138,8 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                     collapsed: true,
                     items: [
                         { text: '概述', link: '/Grammar-DataStructure/java/overview', },
-                        { text: '初步体验', link: '/Grammar-DataStructure/java/primer',},
-                        { text: '注释', link: '/Grammar-DataStructure/java/annotation',},
+                        { text: '初步体验', link: '/Grammar-DataStructure/java/primer', },
+                        { text: '注释', link: '/Grammar-DataStructure/java/annotation', },
                     ]
                 },
             ]
