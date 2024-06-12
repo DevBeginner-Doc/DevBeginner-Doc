@@ -20,11 +20,11 @@
 
 - 下载步骤
 
-- ![image-20240531090221821](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531090221821.png)
+- ![下载1.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D81.png)
 
 
 
-- ![image-20240531092420806](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531092420806.png)
+- ![下载2.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D82.png)
 
 
 
@@ -36,7 +36,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 
 
-- ![](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605103209821.png)
+- ![下载3.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D83.png)![](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605103209821.png)
 
 
 
@@ -44,7 +44,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 
 
-- ![image-20240531093106260](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531093106260.png)
+- ![下载4.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D84.png)![image-20240531093106260](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531093106260.png)
 
 
 
@@ -58,11 +58,11 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 - 方便起见我直接下载桌面了，桌面也在C盘，大家下载时尽量下载路径选D盘或其他盘。
 
-- ![image-20240605103939415](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605103939415.png)
+- ![下载6.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D86.png)![下载5.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D85.png)![image-20240605103939415](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605103939415.png)
 
-- ![image-20240605104008629](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605104008629.png)
+- ![下载8.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D88.png)
 
-- ![image-20240605104034631](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605104034631.png)
+- ![下载9.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D89.png)
 
 
 
@@ -70,11 +70,11 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605104449076.png" alt="image-20240605104449076" style="zoom:80%;" />
+- ![下载10.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D810.png)
 
 
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605104557285.png" alt="image-20240605104557285" style="zoom:80%;" />
+- ![下载11.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D811.png)
 
 
 
@@ -82,7 +82,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
   
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605104837309.png" alt="image-20240605104837309" style="zoom:50%;" />
+- ![下载12.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D812.png)
 
 
 
@@ -90,17 +90,17 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
   
 
-  - <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605105152735.png" alt="image-20240605105152735" style="zoom:50%;" />
+  - ![安装玩成.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%B0%B2%D7%B0%CD%E6%B3%C9.png)
 
 
 
 点击“yes“后开始设置：
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531094055662.png" alt="image-20240531094055662" style="zoom: 67%;" />
+- ![使用1.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C31.png)
 
 
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531094256631.png" alt="image-20240531094256631" style="zoom:67%;" />
+- ![使用2.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C32.png)
 
 
 
@@ -110,7 +110,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 - 首先点击文件：
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605100302230.png" alt="image-20240605100302230" style="zoom:67%;" />
+- ![使用3.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C33.png)
 
 
 
@@ -122,7 +122,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 这里用创建项目做演示：
 
-- ![image-20240605105733412](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605105733412.png)
+- ![使用4.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C34.png)
 
 
 
@@ -132,15 +132,15 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 - 随后创建项目文件
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605110002091.png" alt="image-20240605110002091" style="zoom:67%;" />
+- ![使用5.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C35.png)
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605110032126.png" alt="image-20240605110032126" style="zoom:80%;" />
+- ![使用6.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C36.png)
 
 
 
 - 现在就可以编写第一个程序了：
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605110752777.png" alt="image-20240605110752777" style="zoom:67%;" />
+- ![使用7.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C37.png)
 
 
  
@@ -158,7 +158,8 @@ int main(){//也可以int main(void),void是表示“空”的数据类型
 
 
 
-- 运行结果![image-20240605111148697](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605111148697.png)
+- 运行结果
+![使用8.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C38.png)
 
 
 
@@ -168,6 +169,6 @@ int main(){//也可以int main(void),void是表示“空”的数据类型
 
 工具--选项：
 
-![image-20240605111519922](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605111519922.png)
+![使用9.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C39.png)![image-20240605111519922](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605111519922.png)
 
 字体、背景、语法高亮等常见外观都可以在这儿调。
