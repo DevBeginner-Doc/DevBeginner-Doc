@@ -36,7 +36,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 
 
-- ![下载3.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D83.png)![](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605103209821.png)
+- ![下载3.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D83.png)
 
 
 
@@ -44,11 +44,11 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 
 
-- ![下载4.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D84.png)![image-20240531093106260](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531093106260.png)
+- ![下载4.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D84.png)
 
 
 
-- <img src="C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240531093312650.png" alt="image-20240531093312650" style="zoom: 50%;" />
+- ![下载5.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D85.png)
 
 
 
@@ -58,7 +58,7 @@ C语言手册开发文档：[C 参考手册 - cppreference.com](https://zh.cppre
 
 - 方便起见我直接下载桌面了，桌面也在C盘，大家下载时尽量下载路径选D盘或其他盘。
 
-- ![下载6.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D86.png)![下载5.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D85.png)![image-20240605103939415](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605103939415.png)
+- ![下载6.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D86.png)
 
 - ![下载8.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CF%C2%D4%D88.png)
 
@@ -169,6 +169,6 @@ int main(){//也可以int main(void),void是表示“空”的数据类型
 
 工具--选项：
 
-![使用9.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C39.png)![image-20240605111519922](C:\Users\zjb07\AppData\Roaming\Typora\typora-user-images\image-20240605111519922.png)
+![使用9.png](..%2F..%2Fpublic%2Fimages%2FEnvironment%2FRed-Panda%2F%CA%B9%D3%C39.png)
 
 字体、背景、语法高亮等常见外观都可以在这儿调。
