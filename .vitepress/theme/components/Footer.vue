@@ -25,7 +25,12 @@
 </template>
 
 <script setup>
-const hostname = window.location.hostname;
+import { onMounted, ref } from 'vue';
+
+const hostname = ref(undefined);
+onMounted(() => {
+    hostname.value = window.location.hostname;
+})
 </script>
 
 <style scoped>
