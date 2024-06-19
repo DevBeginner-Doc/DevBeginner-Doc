@@ -226,3 +226,34 @@
   font-size: 15px;
   font-weight: 500;
 }
+
+.content {
+  padding-bottom: 0px !important;
+}
+
+.content-container {
+  height: 100%;
+}
+
+.group {
+  .item {
+    .text {
+      display: flex;
+      align-items: center;
+
+      svg {
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.footnotes {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  background-color: #438fd610;
+  border-radius: 10px;
+  border-left: 4px solid #3451b27a;
+  padding: 2px 20px 2px;
+}
