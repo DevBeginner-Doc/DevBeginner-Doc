@@ -47,5 +47,4 @@ jobs:
         scp: |
           ./dist => /root/caddy-sites/source/html-docs/
         last_ssh: |
-          cd /root/caddy-sites/
-          sudo caddy reload
+          sudo systemctl reload caddy.service
