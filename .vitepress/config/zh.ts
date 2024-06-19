@@ -1,4 +1,5 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
+import { forewordIcon, envIcon, grammarIcon, algoIcon, linuxIcon } from '../theme/icons/siderbar'
 
 export const zh = defineConfig({
     lang: 'zh-Hans',
@@ -22,7 +23,8 @@ export const zh = defineConfig({
         },
 
         outline: {
-            label: '页面导航'
+            label: '页面导航',
+            level: 'deep'
         },
 
         lastUpdated: {
@@ -53,7 +55,7 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebar(): DefaultTheme.SidebarItem[] {
     return [
         {
-            text: '序言',
+            text: forewordIcon + '序言',
             collapsed: false,
             items: [
                 { text: '编写初衷', link: '/Foreword/intention', },
@@ -61,7 +63,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
-            text: '环境搭建',
+            text: envIcon + '环境搭建',
             collapsed: false,
             items: [
                 { text: '引入', link: '/Environment/introduction' },
@@ -108,7 +110,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
-            text: '语法基础&基础数据结构',
+            text: grammarIcon + '语法基础&基础数据结构',
             collapsed: false,
             items: [
                 { text: '引入', link: '/Grammar-DataStructure/introduction', },
@@ -140,13 +142,13 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                         { text: '概述', link: '/Grammar-DataStructure/java/overview', },
                         { text: '初步体验', link: '/Grammar-DataStructure/java/primer', },
                         { text: '注释', link: '/Grammar-DataStructure/java/annotation', },
-                        { text: '变量与运算符', link: '/Grammar-DataStructure/java/变量与运算符', },
+                        { text: '变量与运算符', link: '/Grammar-DataStructure/java/var-opt', },
                     ]
                 },
             ]
         },
         {
-            text: '算法基础',
+            text: algoIcon + '算法基础',
             collapsed: false,
             items: [
                 { text: '引入', link: '/Algorithm/introduction' },
@@ -155,7 +157,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
-            text: 'Linux初阶',
+            text: linuxIcon + 'Linux初阶',
             collapsed: false,
             items: [
                 { text: '引入', link: '/Linux/introduction' },

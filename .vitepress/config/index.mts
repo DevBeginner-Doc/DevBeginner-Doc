@@ -4,9 +4,29 @@ import { zh, search as zhSearch } from './zh.ts'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 export default defineConfig({
-  lastUpdated: true,
   outDir: 'dist',
   srcDir: 'docs',
+  lastUpdated: true,
+
+  locales: {
+    root: { label: "简体中文", ...zh }
+  },
+
+  themeConfig: {
+    logo: '/svg/main-img.svg',
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' }
+    ],
+
+    search: {
+      provider: 'local',
+      options: {
+        locales: { ...zhSearch }
+      }
+    },
+  },
+
   markdown: {
     config: (md) => {
       md.use(footnote)
@@ -36,10 +56,6 @@ export default defineConfig({
     ]
   ],
 
-  locales: {
-    root: { label: "简体中文", ...zh }
-  },
-
   vite: {
     plugins: [
       GitChangelog({
@@ -52,6 +68,7 @@ export default defineConfig({
         },
       }),
     ],
+
     optimizeDeps: {
       include: [
         '@nolebase/vitepress-plugin-enhanced-readabilities > @nolebase/ui > @rive-app/canvas',
@@ -60,6 +77,7 @@ export default defineConfig({
         '@nolebase/vitepress-plugin-enhanced-readabilities/client',
       ],
     },
+
     ssr: {
       noExternal: [
         '@nolebase/vitepress-plugin-enhanced-readabilities',
@@ -68,20 +86,4 @@ export default defineConfig({
       ],
     },
   },
-
-  themeConfig: {
-    logo: '/svg/main-img.svg',
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' }
-    ],
-
-    search: {
-      provider: 'local',
-      options: {
-        locales: { ...zhSearch }
-      }
-    },
-
-  }
 })
