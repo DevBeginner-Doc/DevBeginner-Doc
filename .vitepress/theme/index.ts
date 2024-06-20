@@ -8,13 +8,16 @@ import { NolebaseHighlightTargetedHeading } from '@nolebase/vitepress-plugin-hig
 import { NolebaseGitChangelog } from '@nolebase/vitepress-plugin-git-changelog/client'
 import type { Options as NolebaseReadOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 //-------------------------------------------------
+import './fonts/fonts.css'
 import './style.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
+import 'vitepress-plugin-codeblocks-fold/style/index.css'
 //-------------------------------------------------
 import Footer from './components/Footer.vue'
 //-------------------------------------------------
@@ -34,12 +37,13 @@ export default {
   setup: () => {
     const { frontmatter } = toRefs(useData());
     const route = useRoute();
+    codeblocksFold({ route, frontmatter }, true, 400);
     giscusTalk({
       repo: 'FrexCheat/DevBeginner-Doc',
       repoId: 'R_kgDOL98EjA',
       category: 'General',
       categoryId: 'DIC_kwDOL98EjM4CgLTR',
-      mapping: 'title',
+      mapping: 'pathname',
       inputPosition: 'top',
       lang: 'zh-CN',
       locales: {
@@ -67,6 +71,6 @@ export default {
           defaultMaxWidth: 80
         }
       }
-    } as NolebaseReadOptions)
+    } as NolebaseReadOptions);
   }
 } satisfies Theme
