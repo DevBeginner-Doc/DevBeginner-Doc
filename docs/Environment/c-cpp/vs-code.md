@@ -53,8 +53,9 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 然后遵循安装程序的指引，完成MSYS2的安装，并且，在安装完成的界面，**勾选 Run MSYS2 now 这个选项**，然后再点击Finish按钮，这样在关闭安装程序后会自动弹出一个MSYS2的终端窗口。
 
 在弹出的窗口中，输入下面的指令来安装MinGW-W64工具集：  
-
-    pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+```shell
+pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+```
 
 然后在终端中按回车键接受默认选项，最后在终端中输入Y来确定安装
 
