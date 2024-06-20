@@ -143,6 +143,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                         { text: '初步体验', link: '/Grammar-DataStructure/java/primer', },
                         { text: '注释', link: '/Grammar-DataStructure/java/annotation', },
                         { text: '变量与运算符', link: '/Grammar-DataStructure/java/var-opt', },
+                        { text: '数组', link: '/Grammar-DataStructure/java/array', },
                     ]
                 },
             ]
