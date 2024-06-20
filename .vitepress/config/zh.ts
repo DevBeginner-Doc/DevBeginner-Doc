@@ -1,5 +1,5 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
-import { forewordIcon, envIcon, grammarIcon, algoIcon, linuxIcon } from '../theme/icons/siderbar'
+import { forewordIcon, envIcon, grammarIcon, algoIcon, linuxIcon } from '../theme/icons/sidebar'
 
 export const zh = defineConfig({
     lang: 'zh-Hans',
