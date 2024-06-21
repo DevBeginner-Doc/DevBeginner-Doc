@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 //-------------------------------------------------
 import { NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { NolebaseHighlightTargetedHeading } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
-import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
+import { NolebaseGitChangelogPlugin, NolebaseGitChangelog } from '@nolebase/vitepress-plugin-git-changelog/client'
 import type { Options as NolebaseReadOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
