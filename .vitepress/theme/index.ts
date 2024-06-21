@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 //-------------------------------------------------
 import { NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { NolebaseHighlightTargetedHeading } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
-import { NolebaseGitChangelog } from '@nolebase/vitepress-plugin-git-changelog/client'
+import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import type { Options as NolebaseReadOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
@@ -29,7 +29,6 @@ export default {
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
       'layout-top': () => h(NolebaseHighlightTargetedHeading),
-      'doc-footer-before': () => h(NolebaseGitChangelog),
       'layout-bottom': () => h(Footer),
     })
   },
@@ -61,6 +60,7 @@ export default {
   },
 
   enhanceApp({ app }) {
+    app.use(NolebaseGitChangelogPlugin);
     app.provide(NolebaseReadInjectionKey, {
       layoutSwitch: {
         defaultMode: 5,
