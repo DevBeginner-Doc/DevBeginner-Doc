@@ -39,8 +39,7 @@ jobs:
       with:
         host: ${{ secrets.DC_HOST }}
         user: ${{ secrets.DC_USER }}
-        pass: ${{ secrets.DC_PASS }}
-        port: ${{ secrets.DC_PORT }}
+        key: ${{ secrets.DC_PRIVATE_KEY }}
         connect_timeout: 10s
         first_ssh: |
           rm -rf /root/caddy-sites/source/html-docs/dist
