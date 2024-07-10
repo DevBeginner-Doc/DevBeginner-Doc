@@ -8,7 +8,7 @@ import { NolebaseHighlightTargetedHeading } from '@nolebase/vitepress-plugin-hig
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import type { Options as NolebaseReadOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
-import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+// import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 //-------------------------------------------------
 import './fonts/fonts.css'
@@ -37,26 +37,26 @@ export default {
     const { frontmatter } = toRefs(useData());
     const route = useRoute();
     codeblocksFold({ route, frontmatter }, true, 400);
-    giscusTalk({
-      repo: 'FrexCheat/DevBeginner-Doc',
-      repoId: 'R_kgDOL98EjA',
-      category: 'General',
-      categoryId: 'DIC_kwDOL98EjM4CgLTR',
-      mapping: 'pathname',
-      inputPosition: 'top',
-      lang: 'zh-CN',
-      locales: {
-        'zh-Hans': 'zh-CN',
-      },
-      homePageShowComment: false,
-      lightTheme: 'light',
-      darkTheme: 'transparent_dark',
-    },
-      {
-        frontmatter, route
-      },
-      true
-    );
+    // giscusTalk({
+    //   repo: 'FrexCheat/DevBeginner-Doc',
+    //   repoId: 'R_kgDOL98EjA',
+    //   category: 'General',
+    //   categoryId: 'DIC_kwDOL98EjM4CgLTR',
+    //   mapping: 'pathname',
+    //   inputPosition: 'top',
+    //   lang: 'zh-CN',
+    //   locales: {
+    //     'zh-Hans': 'zh-CN',
+    //   },
+    //   homePageShowComment: false,
+    //   lightTheme: 'light',
+    //   darkTheme: 'transparent_dark',
+    // },
+    //   {
+    //     frontmatter, route
+    //   },
+    //   true
+    // );
   },
 
   enhanceApp({ app }) {
