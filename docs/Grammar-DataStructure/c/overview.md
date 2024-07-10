@@ -1,5 +1,8 @@
-# C语言入门与进阶
+::: warning :construction:WARNING
+本条目仍在积极施工中，可能存在遗漏或不完善的地方
+:::
 
+# C语言入门与进阶
 
 ## 一、&nbsp;初识C语言
 
