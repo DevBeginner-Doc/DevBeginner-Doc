@@ -453,18 +453,130 @@ int main()
     }
 }
 ```
+#### 3.&nbsp;goto语句
+&emsp;&emsp;作用：让程序跳转到指定的位置
+&emsp;&emsp;程序运行时是主函数从上到下逐行执行代码，而goto语句能让程序直接跳到指定的位置，并从那个位置接着往下逐行执行代码。
+&emsp;&emsp;goto语句有两部分：goto和标签名。标签的命名遵循变量命名规则。
+&emsp;&emsp;例如:
+```c
+#include<stdio.h>
+int main(){
+    int a = 7;
+    double b = 9;
+    float c = 11.777;
+    char d = 'D';
 
+part1:
+    printf("%d,%lf,c = %f,d = %c\n",a,b,c,d);
+    //%5d指打印一个整数，这个整数占五列(不够五列的话自动补空格)，不带负号默认右对齐，带负号则为左对齐
+    printf("%5d\n%-5d,%1.0f",a,a,c);
+    if(a >= 7){
+        a -= 4;
+        //当这句goto执行时，程序跳转到part1指定的位置，并从那个位置继续向下逐行执行代码
+        goto part1;
+    }
+    return 0;
+}
+```
+&emsp;&emsp;原则上，不建议在C程序中使用goto语句，我们可以使用if语句、while循环等来代替它
 
 逗号运算符
 ## 五、&nbsp;函数
+### (一)&nbsp;函数是什么？
+&emsp;&emsp;函数是负责完成某项特定任务的一段代码。
+&emsp;&emsp;函数分为库函数和自定义函数。
+### (三)&nbsp;函数都包含什么？
+&emsp;&emsp;通常一个函数包含以下几个部分
+### (二)&nbsp;库函数
+&emsp;&emsp;有一些函数，在开发的过程中每个程序员都有可能用得到，属于比较基础、泛用的函数，比如输入(scanf)输出(printf)函数、计算开方(sqrt())、向下取整(floor)的函数等
+&emsp;&emsp;C语言中这些常用的函数被预先写好，放在一些头文件中，需要用到它们的时候我们只要引入头文件(比如我们前面用的#include<stdio.h>)就可以使用这个头文件里面包含的函数
+&emsp;&emsp;下面展示几个C语言常用的库函数以及它们的用法
+#### 1.&nbsp;输入(scanf())输出(printf())函数
+```c
+#include<stdio.h>
+int main(){
+    int a,b,c,d;
+    //从缓冲区读取四个整数，分别赋值给a、b、c、d四个变量
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    //输出四个整数，数值分别为a、b、c、d的数值
+    printf("%d%d%d%d",a,b,c,d);
+    return 0;
+}
+```
+<mark>让我想想那一堆占位符怎么说，放个图还是……</mark>
 
+#### 2.&nbsp;绝对值函数
+&emsp;&emsp;使用下面这三个函数的时候都需要先引入头文件<math.h>
+##### (1)&nbsp;整型取绝对值
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int n = -28;
+    //取n的绝对值
+    n = abs(n);
+    printf("%d\n",n);
+    return 0;
+}
+```
+##### (2)&nbsp;双精度浮点型取绝对值
+&emsp;&emsp;
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+    double n = -3.14159;
+    //取n的绝对值
+    n = fabs(n);
+    printf("%lf\n",n);
+    return 0;
+}
+```
+##### (3)&nbsp;长整型取绝对值
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+    long n = -1234567891;
+    //取n的绝对值
+    n = labs(n);
+    printf("%ld\n",n);
+    return 0;
+}
+```
+##### (4)判断两个浮点数是否相等
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+    double a = 1.1;
+    double b = 2.3;
+    char myequal = "相等";
+    if(fabs(b - a) <= 1e-6){
+        //打印一个字符串类型的变量，使用%s
+        printf("%s",myequal);
+    }
+    else{
+        printf("不相等\n")
+    }
+    return 0;
+}
+```
+#### 3.&nbsp;指、对、幂、三角函数
+##### (1)指数函数
+&emsp;&emsp;在C语言中，可以使用pow函数来计算指数函数。pow函数的定义为：double pow(double base, double exp)，第一个double表明函数返回值的数据类型，base是底数，exp是指数
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+    printf("%d",(int)pow(3,5));
+    return 0;
+}
+```
+##### (2)对数函数
+```c
 
-
-### (三)&nbsp;printf和scanf函数
-&emsp;&emsp;函数那章在后面，这里提这俩函数是因为刚刚学的东西需要结合它们来练习<br>
-&emsp;&emsp;简单来说，printf是输出函数，scanf是输入函数，它们都是C语言标准库里面的函数，要使用它们，需要先引入头文件stdio.h<br>
-#### 1.&nbsp;printf函数
-&emsp;&emsp;要使用一个函数，我们要先知道它是干什么的，它的参数是什么(需要给它提供几个什么类型的数据)，它的返回值是什么类型的
+```
 
 
 
