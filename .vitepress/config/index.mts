@@ -71,9 +71,6 @@ export default defineConfig({
     ],
 
     optimizeDeps: {
-      include: [
-        '@nolebase/vitepress-plugin-enhanced-readabilities > @nolebase/ui > @rive-app/canvas',
-      ],
       exclude: [
         '@nolebase/vitepress-plugin-enhanced-readabilities/client',
       ],
