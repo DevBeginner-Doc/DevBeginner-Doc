@@ -188,6 +188,7 @@ int main(void)
 int main(void)
 {
     char c = 'A';
+
     //使用%c来输出char类型的字符
     printf("%c",c);
     return 0;
@@ -234,6 +235,7 @@ int main(void)
     short num2 = 133;
     long num3 = 61111;
     long long num4 = 12345678910111;
+
     /*
     打印char或short或int类型的变量，使用%d
     打印long类型的变量，使用%ld
@@ -253,6 +255,7 @@ int main(void)
 int main() {
     int largeNumber = 300;
     char smallNumber = largeNumber; // 截断
+
     printf("%d\n", smallNumber); // 输出44（假设char是有符号的）
     return 0;
 }
@@ -265,19 +268,21 @@ int main() {
 int main() {
     //将一个浮点数1.5赋值给a,因为1.5是浮点数，但是它被赋值给一个整型变量，所以它被自动转换成整数，然后输出
     int a = 5.5;
+
     printf("%d\n", a);
     return 0;
 }
 
 ```
-#### 8&nbsp;数据类型升级
-&emsp;&emsp;数据类型升级（也称为类型提升）是指在表达式中，较小的数据类型会被自动转换为较大的数据类型以避免数据丢失。例如，当int和float一起参与运算时，int会被升级为float。
+#### 8&nbsp;自动类型提升
+&emsp;&emsp;自动类型提升是指在表达式中，取值范围小（或容量小）的类型会被自动提升为取值范围大（或容量大）的类型。例如，当int和float一起参与运算时，int会被升级为float。
 ```c
 #include<stdio.h>
 int main()
 {
-    double c = 5 + 7.7;
-    printf("%lf",c);
+    double a = 7;//7本来是int类型，当把7赋值给double类型的a的时候，7自动提升为double类型
+    double c = 5 + 7.7;//当存储范围小的数据类型与存储范围大的数据类型变量一起混合运算时，会按照其中最大的类型运算。
+
     return 0;
 }
 ```
@@ -354,6 +359,7 @@ long long b = (long long)a;
 ##### (3)&nbsp;二进制转十进制：<br>
 &emsp;&emsp;将二进制数从前往后，每次取出一位，乘2的i次方(i = m - 1)(m表示这是原二进制数从前往后数第几个)，之后所有乘积相加，就是转换成的十进制数。<br>
 &emsp;&emsp;比如10011010010，从前往后，1 * 2^0(2的0次方) + 0 * 2^1 + 1 * 2^2 + 0 * 2^3 + 1 * 2^4 + 1 * 2^5 + 0 * 2^6 + 0 * 2^7 + 0 * 2^8 + 0 * 2^9 + 0 * 2^10 = 1234
+&emsp;&emsp;其实c语言有专门负责进制转换的函数，我们在函数那章再聊，这里先聊原理。
 ##### (4)&nbsp;位运算符<br>
 &emsp;&emsp;刚才我们聊了位的概念，现在我们来聊一下位运算符。
 ###### (4.1)位左移(<<)与位右移(>>)<br>
@@ -484,14 +490,82 @@ part1:
 ## 五、&nbsp;函数
 ### (一)&nbsp;函数是什么？
 &emsp;&emsp;函数是负责完成某项特定任务的一段代码。
-&emsp;&emsp;函数分为库函数和自定义函数。
-### (三)&nbsp;函数都包含什么？
-&emsp;&emsp;通常一个函数包含以下几个部分
-### (二)&nbsp;库函数
-&emsp;&emsp;有一些函数，在开发的过程中每个程序员都有可能用得到，属于比较基础、泛用的函数，比如输入(scanf)输出(printf)函数、计算开方(sqrt())、向下取整(floor)的函数等
+&emsp;&emsp;从用户角度看，函数分为库函数和自定义函数。
+&emsp;&emsp;从函数形式角度，分为无参函数和有参函数
+&emsp;&emsp;这个分类乍一看很难理解，我们先往下看。
+### (二)&nbsp;函数都包含什么？
+&emsp;&emsp;通常一个函数包含:返回值的数据类型 函数名 参数列表 函数体
+&emsp;&emsp;例如我们要自定义一个名为Add的函数
+```c
+//第一个int代表函数执行后返回的数值为int类型（如果不需要返回值的话就写void），Add是我们自己起的函数名，函数名最好能见名知意，()里面是参数列表，也就是说调用这个函数的时候你要给他传入几个什么类型的数据。
+int Add(int a,int b,int c)
+//大括号里面是函数体，也就是这个函数被调用是要执行的代码块
+{
+    int d = 7;
+    return a + b + c;
+}
+int main(){
+    int a = 3, b = 4, c = 5;
+    int e = Add(a, b, c);
+    printf("%d",e);
+    return 0;
+}
+```
+### (三)&nbsp;自定义函数
+#### 1.定义无参函数
+&emsp;&emsp;格式如下
+```c
+//参数列表写成void或者空着都行，表述这个函数不需要传入参数，是个无参函数
+类型名 函数名(参数列表){
+    函数体
+}
+```
+&emsp;&emsp;例如：
+```c
+#include <stdio.h>
+int deter(){
+    int a = 5;
+    int b = 7;
+    return (a > b) ? a : b;
+}
+```
+#### 1.定义有参函数
+&emsp;&emsp;有参函数与无参函数的区别就是有参函数的参数列表不为空，其他格式一致
+我们来看个例子：
+```c
+#include<stdio.h>
+int main(){
+    mymax(6, 8);
+    int a, b, c;
+    scanf("%d%d%d",&a,&b,&c);
+
+}
+```
+
+
+
+
+### (四)&nbsp;库函数
+&emsp;&emsp;有一些函数，在开发的过程中每个程序员都有可能用得到，属于比较基础、泛用的函数，比如输入(scanf)输出(printf)函数、计算开方(sqrt())、向下取整(floor())的函数等
 &emsp;&emsp;C语言中这些常用的函数被预先写好，放在一些头文件中，需要用到它们的时候我们只要引入头文件(比如我们前面用的#include<stdio.h>)就可以使用这个头文件里面包含的函数
 &emsp;&emsp;下面展示几个C语言常用的库函数以及它们的用法
-#### 1.&nbsp;输入(scanf())输出(printf())函数
+&emsp;&emsp;Tips:这些函数不用特意去记，多用几次自然就记住了，忘了就再复习复习
+#### 1.&nbsp;输入输出函数
+##### (1)&nbsp;printf()函数
+&emsp;&emsp;printf() 用于格式化输出到屏幕。printf() 函数在 "stdio.h" 头文件中声明。
+&emsp;&emsp;请求printf()函数打印数据的指令要与待打印数据的类型相匹配。例如，打印整数时使用%d，打印字符时使用%c。这些符号被称为转换说明，它们指定了如何把数据转换成可显示的形式。
+&emsp;&emsp;下面展示一些常见的转换说明和各自对应的输出类型
+
+
+| 转换说明        | 输出   |
+| ------         | ------ | 
+| %d            | 有符号十进制整数 | 
+| %e            | 浮点数，e计数法 | 
+| %E            | 浮点数，e计数法 | 
+| %f            | 单精度浮点数(float)，十进制计数法 | 
+| %lf            | 双精度浮点型(double) | 
+| %p             | 输出存储地址 | 
+
 ```c
 #include<stdio.h>
 int main(){
@@ -503,7 +577,7 @@ int main(){
     return 0;
 }
 ```
-<mark>让我想想那一堆占位符怎么说，放个图还是……</mark>
+
 
 #### 2.&nbsp;绝对值函数
 &emsp;&emsp;使用下面这三个函数的时候都需要先引入头文件<math.h>
@@ -545,6 +619,7 @@ int main(){
 }
 ```
 ##### (4)判断两个浮点数是否相等
+&emsp;&emsp;因为计算机存储浮点数是
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -562,26 +637,35 @@ int main(){
     return 0;
 }
 ```
-#### 3.&nbsp;指、对、幂、三角函数
+#### 3.&nbsp;指、对函数
 ##### (1)指数函数
 &emsp;&emsp;在C语言中，可以使用pow函数来计算指数函数。pow函数的定义为：double pow(double base, double exp)，第一个double表明函数返回值的数据类型，base是底数，exp是指数
 ```c
 #include<stdio.h>
 #include<math.h>
 int main(){
+    //计算3的5次方
     printf("%d",(int)pow(3,5));
     return 0;
 }
 ```
 ##### (2)对数函数
+&emsp;&emsp;log() 是 C 标准库 <math.h> 中的一个函数，用于计算一个浮点数的自然对数（以 e 为底）
+&emsp;&emsp;在这里log()函数其实跟我们高中学过的ln一个意思，都是代表计算以e为底，某个数的对数
 ```c
-
+#include<stdio.h>
+#include<math.h>
+int main(){
+    //计算以e为底，77.3的对数
+    printf("log(%lf) = %lf",77.3 ,log(77.3));
+    return 0;
+}
 ```
 
 
 
-
 待完成:
+生命周期(放函数讲)
 数据溢出（128）
 八进制16进制（121）
 
@@ -589,5 +673,7 @@ int main(){
 |= ^=
 &= 
 
+&emsp;&emsp;文档推荐<a href="https://www.runoob.com/cprogramming/c-input-output.html">菜鸟</a>
+<a href="https://cplusplus.com/reference/">查阅c/c++库函数</a>
 
 &emsp;&emsp;推荐一门课，浙大翁凯老师的<a href="https://www.bilibili.com/video/BV1XZ4y1S7e1/?spm_id_from=333.999.0.0">c语言教程</a>
