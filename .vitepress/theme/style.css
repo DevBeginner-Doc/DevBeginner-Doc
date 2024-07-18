@@ -113,46 +113,25 @@
 }
 
 /**
- * Component: Algolia
+ *Component: Sidebar
  * -------------------------------------------------------------------------- */
 
-.DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+.group {
+  .item {
+    .text {
+      display: flex;
+      align-items: center;
+
+      svg {
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+  }
 }
 
 /**
- * Element: Images Block
- * -------------------------------------------------------------------------- */
-
-.img-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
-  /* 每行最多放两张图片 */
-  gap: 10px;
-  /* 图片之间的间距 */
-  justify-content: center;
-  /* 水平居中 */
-  align-items: center;
-  /* 垂直居中 */
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.img-container img {
-  width: 100%;
-  /* 图片宽度占满父容器 */
-}
-
-/**
- *Component: readabilities
- * -------------------------------------------------------------------------- */
-
-.VPSocialLinks.VPNavBarSocialLinks.social-links {
-  margin-right: 0;
-}
-
-/**
- *Component: VP-Doc
+ *Component: Doc
  * -------------------------------------------------------------------------- */
 
 .vp-doc strong {
@@ -178,24 +157,6 @@
 }
 
 /**
- *Component: VP-Sidebar
- * -------------------------------------------------------------------------- */
-
-.group {
-  .item {
-    .text {
-      display: flex;
-      align-items: center;
-
-      svg {
-        display: inline;
-        margin-right: 5px;
-      }
-    }
-  }
-}
-
-/**
  *Component: Markdown-it-footnote
  * -------------------------------------------------------------------------- */
 
@@ -206,4 +167,35 @@
   border-radius: 10px;
   border-left: 4px solid #3451b27a;
   padding: 2px 20px 2px;
+}
+
+/**
+ *Component: readabilities
+ * -------------------------------------------------------------------------- */
+
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}
+
+/**
+ * Element: Images Block
+ * -------------------------------------------------------------------------- */
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  /* 每行最多放两张图片 */
+  gap: 10px;
+  /* 图片之间的间距 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.img-container img {
+  width: 100%;
+  /* 图片宽度占满父容器 */
 }
