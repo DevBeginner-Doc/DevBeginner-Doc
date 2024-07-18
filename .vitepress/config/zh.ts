@@ -125,7 +125,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                     text: 'C++',
                     collapsed: true,
                     items: [
-                        { text: '概述', link: '/Grammar-DataStructure/cpp/overview', },
+                        { text: '概述', link: '/Grammar-DataStructure/cpp/overview_based', },
                     ]
                 },
                 {
