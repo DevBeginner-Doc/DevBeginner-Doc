@@ -125,7 +125,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                     text: 'C++',
                     collapsed: true,
                     items: [
-                        { text: '概述', link: '/Grammar-DataStructure/cpp/overview_based', },
+                        { text: '概述', link: '/Grammar-DataStructure/cpp/overview', },
                     ]
                 },
                 {
@@ -178,6 +178,7 @@ export const search: DefaultTheme.LocalSearchOptions['locales'] = {
                 buttonAriaLabel: '搜索文档'
             },
             modal: {
+                displayDetails: '显示详细信息',
                 noResultsText: '无法找到相关结果',
                 resetButtonTitle: '清除查询条件',
                 footer: {
