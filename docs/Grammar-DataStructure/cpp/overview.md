@@ -84,7 +84,7 @@ for (int i = 0; i < 10; i++) {
 
 - **练习1**：编写一个程序，声明并初始化不同类型的变量，并计算它们的和。
 
-```
+```cpp
 #include <iostream> // 包含标准输入输出库
 
 int main() {
@@ -107,7 +107,7 @@ int main() {
 
 - **练习2**：使用 `if` 语句判断一个数是否为偶数。
 
-```
+```cpp
 #include <iostream> // 包含标准输入输出库
 
 int main() {
@@ -127,7 +127,7 @@ int main() {
 
 - **练习3**：编写一个循环程序，打印从 1 到 10 的数字。
 
-```
+```cpp
 #include <iostream> // 包含标准输入输出库
 
 int main() {
@@ -213,7 +213,7 @@ int main() {
 
 - **练习1**：编写一个函数，计算两个数的最大值。
 
-```
+```cpp
 #include <iostream>
 
 // 函数声明，用于计算两个数的乘积
@@ -236,7 +236,7 @@ int multiply(int a, int b) {
 
 - **练习2**：使用引用传递编写一个函数，交换两个数的值。
 
-```
+```cpp
 #include <iostream>
 
 // 函数声明，使用指针参数来交换两个数
@@ -262,7 +262,7 @@ void swapUsingPointers(int *pa, int *pb) {
 
 - **练习3**：编写一个函数，打印一个整数数组的所有元素。
 
-```
+```cpp
 #include <iostream>
 
 // 函数声明，计算数组所有元素的总和
@@ -391,7 +391,7 @@ int main() {
 
 - **练习1**：编写一个函数，找出一维数组中的最大值。
 
-```
+```cpp
 #include <iostream>
 
 // 函数声明，找出一维数组中的最大值
@@ -422,7 +422,7 @@ int findMax(int arr[], int size) {
 
 - **练习2**：编写一个函数，反转一个 C 风格字符串。
 
-```
+```cpp
 #include <iostream>
 
 // 函数声明，反转 C 风格字符串
@@ -462,7 +462,7 @@ void reverseCString(char str[]) {
 
 - **练习3**：使用 `std::string` 类编写一个函数，计算字符串中元音字母的数量。
 
-```
+```cpp
 #include <iostream>
 #include <string>
 
@@ -882,8 +882,8 @@ int main() {
 
 **示例代码**：
 
-```
-cpp#include <iostream>
+```cpp
+#include <iostream>
 #include <iomanip>
 
 int main() {
@@ -898,8 +898,8 @@ int main() {
 
 **示例代码**：
 
-```
-cpp#include <iostream>
+```cpp
+#include <iostream>
 #include <iomanip>
 
 int main() {
@@ -915,8 +915,8 @@ int main() {
 
 **示例代码**：
 
-```
-cpp#include <iostream>
+```cpp
+#include <iostream>
 #include <iomanip>
 
 int main() {
@@ -934,8 +934,8 @@ int main() {
 
 **示例代码**：
 
-```
-cpp#include <iostream>
+```cpp
+#include <iostream>
 #include <iomanip>
 
 int main() {
@@ -954,8 +954,8 @@ int main() {
 
 **示例代码**：
 
-```
-cpp#include <iostream>
+```cpp
+#include <iostream>
 
 class Point {
 public:
@@ -983,8 +983,8 @@ int main() {
 
 **示例代码**：
 
-```
-cpp#include <iostream>
+```cpp
+#include <iostream>
 
 class Point {
 public:
