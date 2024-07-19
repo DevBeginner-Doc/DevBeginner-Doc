@@ -196,9 +196,11 @@ void exampleFunction() {
     int localVariable = 42; // 只在 exampleFunction 内可见
 }
 
+int globalVariable = 100; // 全局变量，在整个程序中可见
+
 int main() {
-    int globalVariable = 100; // 全局变量，在整个程序中可见
-    exampleFunction(); // localVariable 在这里不可见
+    int mainVariable = 37; // 只在主函数(main)中可见
+    exampleFunction(); // localVariable 在主函数(main)中不可见
     return 0;
 }
 ```
