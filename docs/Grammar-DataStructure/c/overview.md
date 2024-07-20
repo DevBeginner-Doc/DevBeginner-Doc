@@ -7,7 +7,7 @@
 ## 一、&nbsp;初识C语言
 
 ### (一)简介
-&emsp;&emsp;C语言是一种通用的、面向过程的编程语言，具有高效、灵活、可移植性强等特点。它年代诞生于[贝尔实验室]，由Dennis Ritchie在B语言的基础上开发而来。<br>
+&emsp;&emsp;C语言是一种通用的、面向过程的编程语言，具有高效、灵活、可移植性强等特点。它诞生于1972年的贝尔实验室，由Dennis Ritchie在B语言的基础上开发而来。<br>
 &emsp;&emsp;C程序的源代码文件通常使用.c结尾。
 
 ### (二)&nbsp;语言标准
@@ -319,22 +319,38 @@ printf("%d\n",(!(5 == (3 + (6 == 8||9 == 9) == 9)))||(7 == ((7 > 6) ? 7 : 9)));
 &emsp;&emsp;%=<br>
 &emsp;&emsp;a %= b是a = a % b的简写<br>
 #### 5.&nbsp;其他运算符<br><br>
-##### 5.1自增/自减
+##### 5.1&nbsp;自增/自减
 &emsp;&emsp;++ -- 运算符，用于自增自减，而且每次只自增或者自减1<br>
 &emsp;&emsp;注意b=a++和b=++a的区别：b=++a表示a先自增1，然后再把自增后的值赋值给b；b=a++表示先把a的值赋给b，a再自增1（自增号在前面先自增，自增号在后面后自增）
-##### 5.2三目运算符
+##### 5.2&nbsp;三目运算符
 &emsp;&emsp;三目运算符 ? : 运算符<br>
 ```c
 //如果num1大于num2，则a=num1，否则a=num2
 int a = (num1 > num2) ? num1 : num2;
 ```
-##### 5.3强制类型转换
+##### 5.3&nbsp;强制类型转换
 &emsp;&emsp;在常量或变量前面加上(类型)，强行将其转换为指定的类型。
 ```c
 int a = 9;
 //将int类型的a强制转换为long long类型，并将其赋值给long long类型的b
 long long b = (long long)a;
 ```
+##### 5.4&nbsp;逗号运算符
+&emsp;&emsp;从左到右依次计算表达式,然后返回最右边表达式的结果。
+&emsp;&emsp;所有表达式除了最后一个表达式的结果都会被丢弃。
+&emsp;&emsp;逗号运算符的优先级是最低的,所以它会在所有其他运算符之后执行。
+```c
+#include<stdio.h>
+int main(){
+    int a = 7;
+    int b = 9;
+    printf("%d",(((((++a,b++),a++),++b),a++),++b));//输出12
+    //猛一看很复杂，但是只要知道逗号表达式的运算规则就好理解了(只保留最右边表达式的结果)，一层一层拆括号即可
+    //另外如果你忘了a++和++a的区别了，我们就再来复习一下，++a是a的数值先加1 再拿a的值进行运算，a++是先取走a的值运算，然后再把a本身的值加1
+    return 0;
+}
+```
+
 #### 6&nbsp;位运算符
 <br>
 &emsp;&emsp;这个稍微有点复杂，我们一点一点展开讲
@@ -385,8 +401,8 @@ long long b = (long long)a;
 | 9      | =&emsp;+=&emsp;-=&emsp;*=&emsp;/=&emsp;%= | 
 &emsp;&emsp;有些符号我们还没讲到，不着急，先有个大致印象，等后面我们都会一一讲解。
 
-## 四、&nbsp;
-### (一)、条件语句<br><br>
+## 四、&nbsp;流程控制语句
+### (一)、&nbsp;条件语句
 #### 1.&nbsp;if与if-else
 ```c
 //如果表达式1成立，则执行语句1，并离开这个if语句块(指不用再看这一堆if-else了);否则继续向下看表达式2。如果表达式2成立，则执行语句2，并离开这个if语句块;否则继续向下判定表达式3……
@@ -467,6 +483,38 @@ int main()
     }
 }
 ```
+::: warning
+如果我们不写break的话，switch语句会从符合条件的位置开始，往下一直执行下去，直到遇到break为止。就像下面这个例子展示的那样：
+:::
+```c
+#include<stdio.h>
+int main()
+{
+    int a = 7;
+    switch(a){
+        case 1:
+            printf("%d\n",a + 3);
+
+        case 2:
+            printf("%d\n",a + 2);
+
+        default:
+            printf("%d\n",a + 1);
+            break;
+    }
+    //上面这个switch语句和下面这个if语句是等价的
+    if(a == 1){
+        printf("%d\n",a + 3);
+        printf("%d\n",a + 2);
+        printf("%d\n",a + 1);
+    }else if(a == 2){
+        printf("%d\n",a + 2);
+        printf("%d\n",a + 1);
+    }else {
+        printf("%d\n",a + 1);
+    }
+}
+```
 #### 3.&nbsp;goto语句
 &emsp;&emsp;作用：让程序跳转到指定的位置<br>
 &emsp;&emsp;程序运行时是主函数从上到下逐行执行代码，而goto语句能让程序直接跳到指定的位置，并从那个位置接着往下逐行执行代码。<br>
@@ -493,7 +541,126 @@ part1:
 ```
 &emsp;&emsp;原则上，不建议在C程序中使用goto语句，我们可以使用if语句、while循环等来代替它
 
-逗号运算符
+### (二)、&nbsp;循环语句
+#### 1.&nbsp;while循环
+&emsp;&emsp;while循环是C语言中比较常用的循环语句，它跟if语句有点像<br>
+```c
+#include<stdio.h>
+int main(){
+    int a = 7;
+    //先进行判断，如果条件成立就执行循环体，否则跳出循环
+    //while所属的大括号及其内部的代码称为循环体
+    while(a <= 10) {
+        printf("%d ",a);
+        a++;
+    }
+
+    return 0;
+}
+```
+#### 2.&nbsp;do-while循环
+&emsp;&emsp;do-while循环跟while循环很像，不同的是do-while循环会先执行一次循环体，再进行判断，如果条件成立就继续执行循环体，否则跳出循环。<br>
+```c
+#include<stdio.h>
+int main(){
+    int b = 9;
+    //先进行判断，如果条件成立就执行循环体，否则跳出循环
+    //while所属的大括号及其内部的代码称为循环体
+    do {
+        printf("%d ",b);
+        b++;
+    }while(b <= 15);
+
+    return 0;
+}
+```
+#### 3.&nbsp;for循环
+&emsp;&emsp;for循环用于在满足特定条件的情况下重复执行一段代码。for循环通常用在已经知道循环次数的地方。
+```c
+for (initialization; condition; increment) {
+    // 循环体
+}
+```
+&emsp;&emsp;initialization：初始化部分，在循环开始前执行一次，用于初始化循环控制变量。<br>
+&emsp;&emsp;condition：条件部分，在每次迭代开始前进行测试。如果条件为真（非零），则执行循环体；如果条件为假（零），则终止循环。<br>
+&emsp;&emsp;increment：增量部分，在每次循环体执行完毕后执行，用于更新循环控制变量。<br>
+```c
+#include<stdio.h>
+int main(){
+    for (int i = 0; i < 10; i++) {
+        printf("%d ",i);
+    }
+    return 0;
+}
+```
+&emsp;&emsp;for循环的初始化部分、条件部分、增量部分都是可省略的，例如:<br>
+```c
+#include<stdio.h>
+int main(){
+    int i = 3;
+    for (;i < 7;) {
+        printf("%d ",i++);
+    }
+    for(;;){
+        if(i == 17){
+            printf("循环终止\n");
+            break;
+        }
+        i++;
+    }
+    return 0;
+}
+```
+::: warning
+一定要检查有没有写合适的循环终止条件，避免出现死循环
+:::
+#### 4.&nbsp;break和continue
+&emsp;&emsp;刚才我们提过，break用来跳出一层循环，例如：<br>
+```c
+#include<stdio.h>
+int main(){
+    for(int i = 0;i < 10;i++){
+        printf("%d ",i);
+    }
+    //上面那个for循环和下面这个for循环是等价的
+    for(int i = 0;;i++){
+        if(i >= 10){
+            break;
+        } else {
+            printf("%d ",i);
+        }
+    }
+    return 0;
+}
+```
+&emsp;&emsp;你可能注意到我强调了`一层`循环，因为我们有时候可能会用到嵌套的循环，例如：<br>
+```c
+#include<stdio.h>
+int main(){
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            printf("%d ",i);
+            break;//在这里加break，它会跳出内层循环，但是跳出后外层循环还会执行下一次循环，所以外层的for循环依然会执行十次，但是每轮循环中，内层循环只会执行一次
+        }
+    }
+    //输出0 1 2 3 4 5 6 7 8 9
+    return 0;
+}
+```
+&emsp;&emsp;continue的作用是用来跳过本次循环，继续下一次循环。
+```c
+#include<stdio.h>
+int main(){
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            printf("%d ",i);
+            continue;//在这里加continue，它会跳过本次循环还未执行的代码，直接进入下一次循环，但是不会跳出当前层次的循环。所以内外层的for循环都会执行十次，但是每轮循环中打印j的值的语句不会被执行
+            printf("%d ",j);
+        }
+    }
+}
+```
+
 ## 五、&nbsp;函数
 ### (一)&nbsp;函数是什么？
 &emsp;&emsp;函数是负责完成某项特定任务的一段代码。<br>
@@ -796,19 +963,51 @@ int main(){
 
 ##### (2)&nbsp;scanf()函数
 &emsp;&emsp;学完输出，接下来我们转至输入——学习scanf()函数。C库包含了多个输入函数，scanf()是最通用的一个，因为它可以读取不同格式的数据<br>
-&emsp;&emsp;scanf()和 printf()类似，也使用格式字符串和参数列表。scanf()中的格式字符串表明字符输入流的目标数据类型。两个函数主要的区别在参数列表中。printf()函数使用变量、常量和表达式，而scanf()函数使用指向变量的指针。关于指针是什么咱们在后面将，现在先不必了解如何使用指针，只需记住以下两条简单的规则：
-&emsp;&emsp;如果用scanf()读取基本变量类型的值，在变量名前加上一个&；
-&emsp;&emsp;如果用scanf()把字符串读入字符数组中(数组下一章讲，到时候还会提这一点，不用着急)，不要使用&
-<mark>特别注意，scanf()的格式字符串中写转换字符以外的字符的时候一定一定要慎重，因为它会影响到程序读取数据</mark>
+&emsp;&emsp;scanf()和 printf()类似，也使用格式字符串和参数列表。scanf()中的格式字符串表明字符输入流的目标数据类型。两个函数主要的区别在参数列表中。printf()函数使用变量、常量和表达式，而scanf()函数使用指向变量的指针。关于指针是什么咱们在后面将，现在先不必了解如何使用指针，只需记住以下两条简单的规则：<br>
+&emsp;&emsp;如果用scanf()读取基本变量类型的值，在变量名前加上一个&；<br>
+&emsp;&emsp;如果用scanf()把字符串读入字符数组中(数组下一章讲，到时候还会提这一点，不用着急)，不要使用&<br>
+::: warning
+特别注意，scanf()的格式字符串中写转换字符以外的字符的时候一定一定要慎重，因为它会影响到程序读取数据
 &emsp;&emsp;可能你对我刚刚提到的概念还有点懵，没关系，我们再通过一个例子理一理
+:::
 
 ```c
 #include<stdio.h>
 int main(){
-    
+    int a;
+    double b;
+    long int c;
+
+    scanf("%d",&a);
+    scanf("%lf",&b);
+    scanf("%ld",&c);
+    //有些初学者喜欢在scanf的格式字符串中加一些标点等符号，但是这会改变scanf()的读取行为，导致程序运行出错，例如
+    scanf("%d,%lf",&a,&b);
+    /*可能这样我们看着感觉比%d%lf好看，但是要注意，这样写意味着我们要求输入者在输入a的值之后，必须专门输入一个逗号，然后再输入b的值，
+    但是实际上我们希望的是，输入a的值之后(敲回车)，然后直接输入b的值，而不是在中间输入逗号，然后再输入b的值
+    */
 }
 ```
-
+&emsp;&emsp;我们再举一个例子，输入一组数，求他们的和，并输出小于0的数
+```c
+#include<stdio.h>
+int main(){
+    //输入一组数，求和，并输出小于0的数的个数
+    int cnt = 0;
+    int sum = 0;
+    int temp1;
+    //scanf()函数的返回值是成功读取的项目数，可以通过这个来判断scanf是否正确运行。
+    //另外，EOF是文件的结束符(通常是按 Ctrl+D 或 Ctrl+Z)，像下面的写法可以做到不断读取整数输入，直到遇到文件结束标志（EOF）
+    while(scanf("%d",&temp1) != EOF){
+        if(temp1 < 0){
+            cnt++;
+        }
+        sum += temp1;
+    }
+    printf("这些数的和为%d,小于零的数有%d个\n",sum,cnt);
+    //如果发现输入一直没结束，按下ctrl + z 即可结束输入(有可能需要再敲下回车)
+}
+```
 
 #### 2.&nbsp;绝对值函数
 &emsp;&emsp;使用下面这三个函数的时候都需要先引入头文件<math.h>
@@ -894,10 +1093,271 @@ int main(){
 }
 ```
 
+#### 4.&nbsp;其他函数
+&emsp;&emsp;库函数还有很多很多，在实际开发中我们可以按照需要去相关的网站查阅，这里推荐两个网站，
+&emsp;&emsp;文档推荐<a href="https://www.runoob.com/cprogramming/c-standard-library-ctype-h.html">c标准库之字符函数库</a>
+&emsp;&emsp;英文不错的同学可以看看这个(多看看英文文档没坏处)<a href="https://cplusplus.com/reference/">c/c++库函数</a>
 
+### (五)&nbsp;作用域与生命周期
+#### 1.&nbsp;作用域
+&emsp;&emsp;在C语言中，作用域是程序中定义的变量所存在的区域，超过该区域变量就不能被访问。<br>
+#### 2.&nbsp;局部变量与全局变量
+&emsp;&emsp;在函数或语句块内部声明的变量称为局部变量，在函数或语句块外部声明的变量称为全局变量。例如：<br>
+```c
+#include<stdio.h>
+//a和b是全局变量，在整个文件中都可以访问
+int a = 20;
+int b;
+int main(){
+    int mycalculate1(int a, int b);
+    int outtest1();
+
+    //c和d是局部变量，只能在main函数中访问
+    int c,d;
+
+    for(int i = 0;i < 10;i++){
+        //i是在这个for循环代码块(一对大括号)内定义的，只能在这个for循环代码块中访问
+        printf("%d\n",i);
+    }
+    //printf("%d\n",i);在这里试图打印变量i会报错，因为i的作用域只在上面那个for循环代码块中
+    //换句话说，i已经“死掉了”，不能再被访问了
+    
+    {
+        int temp1 = 90;
+        printf("%d",temp1);
+    }
+    b = 7;//给全局变量赋值，因为b是全局变量，作用域是当前文件，所以在当前源文件中访问b，如果不修改它的值，它就等于7
+
+    c = 12;
+    d = 33;
+    printf("%d\n",mycalculate1(c,d));//输出45
+    outtest1();
+    return 0;
+}
+//函数的参数叫形式参数，被当作该函数内的局部变量，如果与全局变量同名它们会优先使用。这里的a和b是形式参数，作用域只在这个mycalculate1函数中
+//此时a、b的数值等于传入的数的数值，与全局变量a、b无关
+int mycalculate1(int a,int b){
+    printf("b = %d\n",b);//b = 33
+    return a + b;
+}
+int outtest1(){
+    printf("全局变量b = %d\n",b);//b = 7
+}
+```
+
+&emsp;&emsp;那如果希望定义的变量能在其他源文件(一个.c文件称为一个源文件)被直接访问要怎么做呢？<br>
+&emsp;&emsp;很简单，在声明变量的时候直接加上extern关键字，例如：<br>
+```c
+//在test1.c文件中定义全局变量a
+#include<stdio.h>
+extern int a;
+int main(){
+    a = 90;
+    printf("%d\n",a);//输出90
+    return 0;
+}
+```
+```c
+//在test2.c文件中引用test1.c文件中定义的a
+#include<stdio.h>
+int main(){
+    a = 20;
+    printf("%d\n",a);
+    return 0;
+}
+
+```
+
+&emsp;&emsp;在C语言中，extern关键字用于声明一个变量或函数，该变量或函数在其他文件中定义。使用extern可以在多个源文件之间共享全局变量或函数。extern声明的变量本身并不分配内存，而只是告诉编译器该变量在其他地方定义，编译器应在链接阶段找到其定义。
+#### 3.&nbsp;多文件编程
+&emsp;&emsp;在同一个文件中，可以定义多个函数，但是随着我们自定义的函数越来越多，代码行数也越来越长，这时再把所有的代码都放进一个文件中显得有些臃肿。<br>
+&emsp;&emsp;我们可以将不同的函数分别放进不同的源文件中，主函数(main函数)那边只需要直接调取函数即可。<br>
+&emsp;&emsp;一般我们采用两种方式来进行多文件编程。<br>
+##### (1)&nbsp;
+&emsp;&emsp;将函数体放到不同的文件中，然后只在主函数中保留原型声明。例如：<br>
+```c
+//在main.c文件中(名字随便，但是尽量见名知意，下同)
+#include<stdio.h>
+int mymax(int x, int y);
+int myAdd(int x, int y);
+int main(){
+    printf("%d\n",mymax(10,20));
+    printf("%d\n",myAdd(10,20));
+    return 0;
+}
+```
+```c
+//在mymax.c文件中
+#include<stdio.h>
+int mymax(int x, int y){
+    return (x > y) ? x : y;
+}
+```
+```c
+//在myAdd.c文件中
+#include<stdio.h>
+int myAdd(int x, int y){
+    return x + y;
+}
+```
+##### (2)&nbsp;自定义头文件
+&emsp;&emsp;这种方法更直接，把全局变量、函数声明都放到一个自定义的头文件中，然后在主函数中直接引用。例如：<br>
+```c
+//在myfunc.h文件中
+//使用#include引入头文件，在编译时IDE会直接把头文件的内容复制到当前源文件中，所以你甚至可以直接把其他头文件也写进来
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+// 全局变量声明
+	extern int cou_1_scorenumber;
+	extern int cou_2_scorenumber;
+
+// 函数声明
+    extern int mymax(int x, int y);
+    // 1.新增学生信息
+    extern int new_stu_information(int student_number1);
+    // 2.新增课程信息
+    extern int new_cou_information(int course_number1);
+
+```
+```c
+//在主函数所在的源文件main.c中
+#include <stdio.h>
+#include"mystruct.h"//引入自定义头文件，注意是用双引号而不是用<>
+int main(){
+    right = 2;
+    cou_1_scorenumber = 1;
+    cou_2_scorenumber = 2;
+    printf("%d\n",mymax(cou_1_scorenumber,cou_2_scorenumber));
+    return 0;
+}
+```
+&emsp;&emsp;之后再分别在其他源文件中写函数体即可，这里与方法一类似，不再赘述。<br>
+
+## 六、&nbsp;数组
+### (一)&nbsp;数组是什么？
+&emsp;&emsp;数组是C语言中重要的数据类型，它是一个容器，其中存放了许多数据类型相同的元素<br>
+&emsp;&emsp;打个比方，数组就像一个柜子，每个格子放了一个写着数字或字母的小球<br>
+&emsp;&emsp;数组一旦创建，就不能再改变大小<br>
+### (二)&nbsp;数组的格式？
+&emsp;&emsp;数组的格式为：数据类型 数组名[元素数量]。例如:<br>
+```c
+#include<stdio.h>
+int main(){
+    int number[100];
+    int i;
+    //读入10个数并依次存储到数组中
+    for(i = 0; i < 10; i++){
+        scanf("%d",&number[i]);
+    }
+    //循环遍历数组，输出数组中存储的元素
+    for(i = 0; i < 10; i++){
+        printf("%d ",number[i]);
+    }
+    printf("\n");
+    return 0;
+}
+```
+### (三)&nbsp;访问数组
+&emsp;&emsp;在C语言中,遍历数组指的是按照一定的顺序访问数组中的每个元素。<br>
+&emsp;&emsp;方括号[]中的数字表示的是要访问的元素的位置，即它是数组中第几个元素，这个数字被称为数组的下标<br>
+:::warning
+数组的下标从0开始，数组的下标不能超过数组的长度
+:::
+```c
+#include<stdio.h>
+int main(){
+    const int a = 10;//const修饰的变量不能被修改数值
+    //也就是说如果我们再加一行a = 7会直接报错
+    int number[a];//定义一个数组，数组的长度为a
+
+    for(int i = 0; i < a; i++){
+        number[i] = i;
+    }
+    for(int i = 0; i < a; i++){
+        printf("%d ",number[i]);
+    }
+    return 0;
+}
+```
+### (四)&nbsp;数组初始化
+#### 1.&nbsp;先创建，后初始化
+```c
+#include<stdio.h>
+int main(){
+    int number[10];
+    for(int i = 0; i < 10; i++){
+        number[i] = i;
+    }
+    return 0;
+}
+```
+#### 2.&nbsp;数组的集成初始化
+```c
+#include<stdio.h>
+int main(){
+    int number[] = {1,2,8,4,5,6,17,8,19,10};//数组初始化
+    //大括号中的数一次用于初始化数组中的每个单元
+    //[]内可以不写，IDE会自动填充
+}
+```
+#### 3.&nbsp;(C99only)(不常用)
+```c
+#include<stdio.h>
+int main(){
+    int a[10] = {
+        [0] = 1,
+        [2] = 3,6,9
+    };
+    //给第一个元素(a[0])赋值为1，给第三个元素(a[2])赋值为3，给第四个元素(a[3])赋值为6，给第五个元素(a[4])赋值为9
+    //其他位置的值都为0
+    return 0;
+}
+```
+::: warning 
+不能这样赋值
+```c
+#include<stdio.h>
+int main(){
+    int a[10];
+    for(int i = 0; i < 10; i++){
+        a[i] = i;
+    }
+    int b[] = a;//不能这样赋值()
+}
+```
+:::
+
+### (五)&nbsp;数组的大小
+&emsp;&emsp;数组的大小由数组的元素个数决定，数组的大小是固定的，不能改变<br>
+&emsp;&emsp;如何查看数组的大小呢？使用sizeof操作符即可<br>
+&emsp;&emsp;C语言中,sizeof 用于获取数据类型或变量的大小,单位是字节。它的用法如下：<br>
+```c
+//相信大家已经对程序整体的结构有了一个大致的了解，从这里开始我有些地方就只给代码片段了，
+printf("%d",sizeof(data_type));//data_type为数据类型
+printf("%d",sizeof(variable));//variable为变量名字
+//比如我们想看看int类型在我们的电脑上究竟占几个字节
+printf("%d",sizeof(int));//data_type为数据类型
+```
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 待完成:
-生命周期(放函数讲)
+for-each循环放到指针那讲
+
+
+
+
 数据溢出（128）
 八进制16进制（121）
 
@@ -905,7 +1365,6 @@ int main(){
 |= ^=
 &= 
 
-&emsp;&emsp;文档推荐<a href="https://www.runoob.com/cprogramming/c-input-output.html">菜鸟</a>
-<a href="https://cplusplus.com/reference/">查阅c/c++库函数</a>
+
 
 &emsp;&emsp;推荐一门课，浙大翁凯老师的<a href="https://www.bilibili.com/video/BV1XZ4y1S7e1/?spm_id_from=333.999.0.0">c语言教程</a>
