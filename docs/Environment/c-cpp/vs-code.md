@@ -43,7 +43,7 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 前者或后者并没有什么区别，只取决于你个人的喜好。
 
-***“...等一下，我的D盘里没有 `Software` 这个文件夹！？”**  
+**“...等一下，我的D盘里没有 `Software` 这个文件夹！？”**  
 ***——没有关系，新建一个就好，这并不是什么问题。***
 
 另外需要特别注意的是，安装路径中 **最 好 不 要 出 现 中 文**，例如 `D:/VS扣得` 就是一个非常差劲的安装路径名称，使用这样的安装路径可能会导致一些意料之外的错误。
@@ -108,7 +108,7 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 ![msys2 installation | image_1-2-5](/images/Environment/vs-code/msys2_5.png)
 
 **“完蛋了！我好像忘记勾那个框框了！”**  
-*——不用太慌张，如果忘记勾选的话，直接在Windows的搜索栏里搜索 **“MSYS2 MSYS”** 并运行即可，这同样会呼出MSYS2的终端窗口*
+*——不用太慌张，如果忘记勾选的话，直接在Windows的搜索栏里搜索 **“MSYS2 UCRT64”** 并运行即可，这同样会呼出MSYS2的终端窗口*
 
 ![msys2 installation | msys2_icon](/images/Environment/vs-code/msys2_icon.png)
 
