@@ -170,7 +170,7 @@ pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 
 最后，点击 ***“确定”*** 来保存环境变量配置
 
-然后打开cmd或powershell，依次输入 `gcc -v` ，`g++ -v`，`gdb -v` 来测试环境变量是否配置正常  
+然后打开cmd或powershell，依次输入 `gcc --version` ，`g++ --version`，`gdb --version` 来测试环境变量是否配置正常  
 
 ![env path settings](/images/Environment/vs-code/env_path_7.png)
 
@@ -234,15 +234,13 @@ VSCode默认为英文界面，如果需要中文界面，同样可以在扩展�
 这一步所填写的路径与先前我们配置环境变量时所填写的的路径相同，只不过需要注意的是，在VSCode的配置文件中，分隔目录层级的符号为两个反斜杠 `\\` 或者一个正斜杠 `/` ，而不是一个反斜杠 `\`
 
 也就是说，你需要填写的路径应该长这样：  
- ``D:\\Software\\msys64\\ucrt64\\bin\\``  
+ ``D:\\Software\\msys64\\ucrt64\\bin``  
 或者这样：  
-``D:/Software/msys64/ucrt64/bin/``  
+``D:/Software/msys64/ucrt64/bin``  
 二者都是可以的，你可以根据个人喜好选择一种方法填写。
 :::
 
 是时候喝口水，伸个懒腰，然后休息一下了
-
-:P
 
 至此配置部分已经全部结束，接下来我们终于可以愉快地使用VSCode来编写我们的第一个C++程序了。
 
@@ -297,6 +295,6 @@ Ctrl+S 保存一下这份新鲜出炉的HelloWorld，接下来点击右上角出
 
 ***Good Luck & Have Fun***
 
-***:P***
+***`:P`***
 
 
