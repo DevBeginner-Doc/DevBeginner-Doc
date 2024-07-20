@@ -2,84 +2,130 @@
 本条目仍在积极施工中，可能存在遗漏或不完善的地方
 :::
 
-# 简介
+# Dev C++
 
-Dev-C++ 是轻量级的集成开发环境（IDE），主要面向 C 和 C++ 程序设计，虽然Dev-C++ 的原始版本（5.11）自2016年之后就没有再更新，但是由于其上手简单，门槛低，依然是较适合新生使用的一款工具。
+![Devcpp-1](/images/Environment/dev_c++/dc-1.png)
 
-另外，一些算法比赛，例如蓝桥杯等，也是将Dev-c++作为官方运行环境。
+## 简介
 
-在这里，将带领大家一步步熟悉Dev-C++的安装、配置、以及带领大家做出更适合自己的代码显示风格。
+Dev-C++ 是轻量级的 C/C++ IDE 。它集成了GNU的GCC、G++编译器以及GDB调试器。
 
-# 安装
+虽然 Dev-C++ 的原始版本（5.11）自2016年之后就没有再更新，但是由于其上手简单，门槛低，依然是适合初学者使用的一款工具。另外，一些算法比赛，例如蓝桥杯等，也是将 Dev-C++ 作为官方指定使用的IDE。
 
-## 下载Dev-c++安装包
+## 下载
 
-进入DEV-C++库官网，点击"DownLoad"按钮，之后会进入第二个界面，等待倒计时结束，会自动开始下载。如果下载速度过慢或者无法进入该网页，请移步此处下载: https://frexcheat.lanzoul.com/i4b2P1brn3ri  密码:h5v6（推荐网盘下载）
+### 官网下载
 
-<div class="img-container">
-  <img src="/images/Environment/dev_c++/安装2.png" alt="安装2"/>
-  <img src="/images/Environment/dev_c++/cs1.png" alt="cs1"/>
-</div>
+官网下载途径只提供到了 `4.9.9` 版本，这里我们从 Dev-C++ 的 `Sourceforge` 仓库下载最新版本 `5.11`
+
+[点击此处下载](https://sourceforge.net/projects/orwelldevcpp/files/Setup%20Releases/Dev-Cpp%205.11%20TDM-GCC%204.9.2%20Setup.exe/download)
+
+### 本站下载
+
+点击此处下载
 
 ## 安装
 
-**双击打开安装包，等待加载完毕**
+打开下载好的安装程序，如果出现以下界面，请点击 `是`
 
-![1716729906593](/images/Environment/dev_c++/安装1.png)
+![Devcpp-Install-1](/images/Environment/dev_c++/dc-i-1.png)
 
-**这里直接先选择English，安装完成时，可以换成中文。然后我们一路下一步**
+等待程序加载完毕，按照图中指示操作进行
 
-<div class="img-container">
-  <img src="/images/Environment/dev_c++/安装2.png" alt="安装2"/>
-  <img src="/images/Environment/dev_c++/安装3.png" alt="安装3"/>
-</div>
+![Devcpp-Install-2](/images/Environment/dev_c++/dc-i-2.png)
 
-**到了这一步，我们需要将我们的下载路径更改（推荐非系统盘），并且最好记着我们的下载路径**
+![Devcpp-Install-3](/images/Environment/dev_c++/dc-i-3.png)
 
-![1716730262663](/images/Environment/dev_c++/安装4.png)
+![Devcpp-Install-4](/images/Environment/dev_c++/dc-i-4.png)
 
-**安装完成，选择简体中文，然后下一步**
+![Devcpp-Install-5](/images/Environment/dev_c++/dc-i-5.png)
 
-![1716730262663](/images/Environment/dev_c++/安装5.png)
+:::warning :construction:WARNING
+此处注意，安装路径最好不要带有中文！
+:::
 
-**软件默认为亮色模式，如果喜欢黑色模式，可以将颜色选为** `GSS Hacker`
+![Devcpp-Install-6](/images/Environment/dev_c++/dc-i-6.png)
 
-![1716730262663](/images/Environment/dev_c++/安装6.png)
+随后等待安装完成即可
 
-## 初步使用
+![Devcpp-Install-7](/images/Environment/dev_c++/dc-i-7.png)
 
-### 新建文件
+安装完成后点击 `Finish` 按钮即可打开 Dev-C++
 
-打开左上角文件 --> 新建 --> 项目 ，或者直接使用快捷键ctrl + n。新建完成后会在代码区上方新增`未命名`的窗口，即为我们创建的文件。
+![Devcpp-Install-8](/images/Environment/dev_c++/dc-i-8.png)
 
-### 保存文件
+打开后的界面右侧，选择 `简体中文/(Chinese)`，然后点击 `Next`
 
-打开左上角文件 --> 另存为 --> 选择保存位置、文件名称、文件类型 --> 保存，或者使用快捷键ctrl + s。
+![Devcpp-Install-9](/images/Environment/dev_c++/dc-i-9.png)
 
-### 运行
+接下来可以在这个界面选择你喜欢的主题颜色，以及字体
 
-三个按钮分别为编译、运行、编译且运行，我们在运行程序时，需要先对其进行编译，编译无误后，才能运行。
+![Devcpp-Install-10](/images/Environment/dev_c++/dc-i-10.png)
 
-![1716730262663](/images/Environment/dev_c++/使用3.png)
+个人觉得黑色（GSS Hacker）不错，但是本人有夜盲症，所以就不选黑色来演示了，选完之后点击 `OK`
 
-# 调试
+![Devcpp-Install-11](/images/Environment/dev_c++/dc-i-11.png)
 
-在运行程序时，我们不免遇见一个Bug，这时，我们便可以通过调试来解决Bug。
+![Devcpp-Install-12](/images/Environment/dev_c++/dc-i-12.png)
 
-**提醒**，同学们可以先在此开启调试功能，而在后续的学习中会逐渐了解其使用方法，因此，这里的使用只做大致介绍
+至此，Dev-C++就可以正常使用了
 
-## 打开调试功能
+![Devcpp-Install-13](/images/Environment/dev_c++/dc-i-13.png)
 
-1. 打开左上方工具 --> 编译器选项 --> 代码生成/优化 --> 连接器 --> 生成调试信息 --> 选择yes。
-2. 左上方工具 --> 环境选项 --> 勾选如图选项<br><br>![1716730262663](/images/Environment/dev_c++/编译1.png)
-3. 勾选如图<br><br>![1716730262663](/images/Environment/dev_c++/调试2.png)
+## 使用
 
-## 如何使用
+你可以选择创建项目，也可以选择创建源代码。后者在保存代码的时候需要自己来命名到底是C语言文件还是C++文件
 
-1. 在需要停止的地方打上断点 ：在对应代码行的左侧点击行号位置<br><br>![1716730262663](/images/Environment/dev_c++/调试3.png)
-2. 点击`编译且运行`按钮右侧紫色对号图标，便能在下方看到调试台<br><br>![1716730262663](/images/Environment/dev_c++/调试4.png)
-3. 进行调试<br><br>我们主要使用的有 `下一步（运行该行代码并将标识框下移一行）`、`跳过（运行剩余全部代码）`、`单步进入（如果该行代码中含有函数等则进入函数，否则运行该行代码并将标识框下移一行）`。同时，当我们点击代码中的变量时，在左侧会同步显示该变量值供我们参考。
+### 创建项目
 
-# 美化界面
+按照以下图示步骤来创建项目
 
-**鉴于同学们可能觉得现在的界面不好看，同时感觉其他编译器环境配置麻烦，因此在这里介绍一下该如何美化我们界面，供同学们参考。**
+![Devcpp-Usage-1](/images/Environment/dev_c++/dc-u-1.png)
+
+![Devcpp-Usage-2](/images/Environment/dev_c++/dc-u-2.png)
+
+![Devcpp-Usage-3](/images/Environment/dev_c++/dc-u-3.png)
+
+![Devcpp-Usage-4](/images/Environment/dev_c++/dc-u-4.png)
+
+之后，就可以得到一个有初始代码的 `main.c` 文件了
+
+![Devcpp-Usage-5](/images/Environment/dev_c++/dc-u-5.png)
+
+示例代码
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	printf("hello,devbeginner!");
+	return 0;
+}
+```
+
+![Devcpp-Usage-6](/images/Environment/dev_c++/dc-u-6.png)
+
+![Devcpp-Usage-7](/images/Environment/dev_c++/dc-u-7.png)
+
+![Devcpp-Usage-8](/images/Environment/dev_c++/dc-u-8.png)
+
+![Devcpp-Usage-9](/images/Environment/dev_c++/dc-u-9.png)
+
+错误代码
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	printf("hello,devbeginner!") //没有分号  // [!code focus] // [!code error]
+	return 0;
+}
+```
+
+![Devcpp-Usage-10](/images/Environment/dev_c++/dc-u-10.png)
