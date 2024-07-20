@@ -92,6 +92,8 @@ Dev-C++ 是轻量级的 C/C++ IDE 。它集成了GNU的GCC、G++编译器以及G
 
 ![Devcpp-Usage-5](/images/Environment/dev_c++/dc-u-5.png)
 
+### 运行代码
+
 示例代码
 
 ```c
