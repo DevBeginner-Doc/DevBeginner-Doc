@@ -119,6 +119,12 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                     collapsed: true,
                     items: [
                         { text: '概述', link: '/Grammar-DataStructure/c/overview', },
+                        { text: '数据类型', link: '/Grammar-DataStructure/c/data-type', },
+                        { text: '运算符', link: '/Grammar-DataStructure/c/operator', },
+                        { text: '流程控制', link: '/Grammar-DataStructure/c/control', },
+                        { text: '函数', link: '/Grammar-DataStructure/c/function', },
+                        { text: '数组', link: '/Grammar-DataStructure/c/array', },
+                        { text: '指针', link: '/Grammar-DataStructure/c/pointer', },
                     ]
                 },
                 {
