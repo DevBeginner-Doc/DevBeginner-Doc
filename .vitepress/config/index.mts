@@ -28,34 +28,12 @@ export default defineConfig({
   },
 
   markdown: {
+    math: true,
     lineNumbers: true,
     config: (md) => {
       md.use(footnote)
     }
   },
-
-  head: [
-    [
-      'link',
-      { rel: 'preconnect', href: 'https://fonts.loli.net' }
-    ],
-    [
-      'link',
-      { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }
-    ],
-    [
-      'link',
-      { href: 'https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400..900&display=swap', rel: 'stylesheet' }
-    ],
-    [
-      'link',
-      { href: 'https://fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap', rel: 'stylesheet' }
-    ],
-    [
-      'link',
-      { rel: 'icon', href: '/svg/main-img.svg' }
-    ]
-  ],
 
   vite: {
     plugins: [
@@ -84,4 +62,27 @@ export default defineConfig({
       ],
     },
   },
+
+  head: [
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.loli.net' }
+    ],
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }
+    ],
+    [
+      'link',
+      { href: 'https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400..900&display=swap', rel: 'stylesheet' }
+    ],
+    [
+      'link',
+      { href: 'https://fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap', rel: 'stylesheet' }
+    ],
+    [
+      'link',
+      { rel: 'icon', href: '/svg/main-img.svg' }
+    ],
+  ]
 })
