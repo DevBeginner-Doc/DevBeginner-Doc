@@ -124,7 +124,8 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                         { text: '流程控制', link: '/Grammar-DataStructure/c/control' },
                         { text: '函数', link: '/Grammar-DataStructure/c/function' },
                         { text: '数组', link: '/Grammar-DataStructure/c/array' },
-                        { text: '指针', link: '/Grammar-DataStructure/c/pointer' }
+                        { text: '指针', link: '/Grammar-DataStructure/c/pointer' },
+                        { text: '结构体和链表', link: '/Grammar-DataStructure/c/struct' }
                     ]
                 },
                 {
