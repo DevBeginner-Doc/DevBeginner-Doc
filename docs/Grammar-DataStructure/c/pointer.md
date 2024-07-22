@@ -602,6 +602,6 @@ realloc() 分配的新内存块可能与原来的不在同一个位置,因此不
 //动态增加数组大小：
 int *arr = malloc(sizeof(int) * 10);
 // ... 使用数组
-arr = realloc(arr, sizeof(int) * 20); // 扩大数组大小
+arr = (int*)realloc(arr, sizeof(int) * 20); // 扩大数组大小
 
 ```
