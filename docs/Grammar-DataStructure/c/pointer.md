@@ -503,8 +503,38 @@ char *strcasestr(const char *s1, const char *s2);
 (意思就是搜索的时候不区分大小写) */
 ```
 ### 6.&nbsp;单字符输入输出
+#### (1).&nbsp;putchar()函数
+```c
+//函数原型：
+int putchar(int c);
+//接收一个字符
+//输出一个字符到标准输出设备(屏幕)
+//返回值为输出的字符个数，返回EOF(-1)表示失败
+```
+#### (2).&nbsp;putchar()函数
+```c
+//函数原型：
+int getchar(void);
+//从标准输入设备(键盘)读取一个字符
+//返回值为读取的字符，返回EOF(-1)表示失败
+```
 
-
+```c
+//示例：
+#include<stdio.h>
+int main(){
+    int ch;
+    while((ch = getchar()) != EOF){
+        putchar(ch);
+    };
+    printf("EOF\n");
+    //如何终止c程序运行？
+    //windows ctrl + z
+    //linux ctrl + d
+    
+    return 0;
+}
+```
 
 
 
@@ -564,7 +594,14 @@ newsize是要分配的内存块的新大小(以字节为单位)
 此时它和malloc函数一样。
 */
 ```
-
+注意：
+realloc() 分配的新内存块可能与原来的不在同一个位置,因此不能使用原来的指针访问新的内存块。<br>
+建议在调用 realloc() 后立即检查返回值,以确保内存分配成功。<br>
+如果 realloc() 失败,原内存块不会被释放,需要手动释放。<br>
 ```c
+//动态增加数组大小：
+int *arr = malloc(sizeof(int) * 10);
+// ... 使用数组
+arr = realloc(arr, sizeof(int) * 20); // 扩大数组大小
 
 ```
