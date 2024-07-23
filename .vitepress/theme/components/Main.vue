@@ -1,5 +1,5 @@
 <template>
-    <div class="card-main">
+    <div class="card-main" style="flex-wrap: wrap;">
         <img :src="image" alt="DevBeginner Doc" style="max-width: 256px; max-height: 256px;">
         <div style="display: flex; flex-direction: column; gap: 20px; padding: 10px; margin-left: 10px;">
             <div class="card-title">
@@ -167,7 +167,7 @@
             </div>
         </div>
         <!-- 比赛信息栏 -->
-        <div v-for="data in contests" class="card-item">
+        <div v-for="data in contests" class="card-item" style="flex-wrap: wrap;">
             <div class="contest-status" :style="getContestClass(data.status)"></div>
             <div class="contest-ico">
                 <svg v-if="data.oj === 'LuoGu'" t="1721710510433" class="icon" viewBox="0 0 2012 1024" version="1.1"
@@ -345,6 +345,7 @@ onMounted(() => {
 
 .card-main {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 10px;
