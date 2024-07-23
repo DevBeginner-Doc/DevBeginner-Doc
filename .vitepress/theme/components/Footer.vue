@@ -13,9 +13,6 @@
         <div v-if="hostname === 'newbie.frexlink.cn'" class="container-block">
             <div class="container-block" style="margin-right: 10px;">
                 <img src="../icons/beian-mps.png" alt="mps">
-                <a href="https://beian.mps.gov.cn/" target="_blank">
-                    &nbsp;豫公网安备10000002000000号
-                </a>
                 <a href="https://beian.miit.gov.cn/" target="_blank">
                     &nbsp;&nbsp;豫ICP备2024073311号-1
                 </a>
