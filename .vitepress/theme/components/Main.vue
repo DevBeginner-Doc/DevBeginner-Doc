@@ -81,7 +81,7 @@
             <strong style="font-size: 1.22rem;">校内相关实验室</strong>
         </div>
         <div class="card-item">
-            <div class="contest-status" style="background-color: rgb(0, 0, 0);"></div>
+            <div class="contest-status" style="background-color: currentColor;"></div>
             <div class="contest-info">
                 <div style="display: flex; flex-direction: column; gap: 15px">
                     <strong style="font-size: 1.15rem;">服务器暂无数据</strong>
@@ -110,12 +110,12 @@
                         fill="currentColor" p-id="7136"></path>
                 </svg>
                 <a class="alink" style="font-size: 0.89rem" href="" target="_blank">
-                    CalDav日程订阅
+                    CalDav订阅
                 </a>
             </div>
         </div>
         <div class="card-item">
-            <div class="contest-status" style="background-color: rgb(0, 0, 0);"></div>
+            <div class="contest-status" style="background-color: currentColor;"></div>
             <div class="contest-info">
                 <div style="display: flex; flex-direction: column; gap: 15px">
                     <strong style="font-size: 1.15rem;">服务器暂无数据</strong>
@@ -147,7 +147,7 @@
                         fill="currentColor" p-id="7136"></path>
                 </svg>
                 <a class="alink" style="font-size: 0.89rem" href="" target="_blank">
-                    CalDav日程订阅
+                    CalDav订阅
                 </a>
             </div>
         </div>
@@ -374,6 +374,7 @@ onMounted(() => {
     box-shadow: 0px 0px 4px var(--vp-c-text-3);
     border-radius: 10px;
     border: solid 1px var(--vp-c-text-3);
+    position: relative;
 }
 
 .card-item:hover {
@@ -382,8 +383,9 @@ onMounted(() => {
 }
 
 .contest-status {
-    height: 75px;
-    width: 7px;
+    position: absolute;
+    height: 75%;
+    width: 6px;
     border-radius: 10px;
 }
 
