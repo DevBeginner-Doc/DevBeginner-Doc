@@ -199,3 +199,35 @@
   width: 100%;
   /* 图片宽度占满父容器 */
 }
+
+@keyframes Updown {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -48%);
+  }
+}
+
+#VPContent>div>div.VPHero.has-image.VPHomeHero>div>div.image>div>img {
+  animation: Updown 0.9s infinite alternate ease-in-out;
+}
+
+@media (min-width: 640px) {
+  #VPContent>div>div.VPHero.has-image.VPHomeHero>div>div.image>div>img {
+    max-width: 300px !important;
+    max-height: 300px !important;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 960px) {
+  #VPContent>div>div.VPHero.has-image.VPHomeHero>div>div.image>div>img {
+    max-width: 400px !important;
+    max-height: 400px !important;
+    width: 400px;
+    height: 400px;
+  }
+}

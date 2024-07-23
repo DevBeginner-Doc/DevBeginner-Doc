@@ -1,5 +1,5 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
-import { forewordIcon, envIcon, grammarIcon, algoIcon, linuxIcon } from '../theme/icons/sidebar'
+import { forewordIcon, envIcon, grammarIcon, algoIcon, linuxIcon } from '../theme/icons/svg-path'
 
 export const zh = defineConfig({
     lang: 'zh-Hans',
@@ -46,9 +46,10 @@ export const zh = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
     return [
-        { text: '首页', link: '/' },
-        { text: '初衷', link: '/Foreword/intention' },
-        { text: '入门须知', link: '/Foreword/prerequisites' },
+        { text: '首页', link: '/main' },
+        { text: 'Hello 算法', link: 'https://www.hello-algo.com/' },
+        { text: 'Oi Wiki', link: 'https://oi-wiki.org/' },
+        { text: 'ZZULI OJ', link: 'https://acm.zzuli.edu.cn/' },
     ]
 }
 
@@ -67,7 +68,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '引入', link: '/Environment/introduction' },
-                { text: '前置知识', link: '/Environment/pre-knowledges' },
+                { text: '准备', link: '/Environment/pre-knowledges' },
                 {
                     text: 'C/C++',
                     collapsed: true,
