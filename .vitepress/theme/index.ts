@@ -1,4 +1,4 @@
-import { h, toRefs } from 'vue'
+import { h, ref } from 'vue'
 import type { Theme } from 'vitepress'
 import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
@@ -8,7 +8,6 @@ import { NolebaseHighlightTargetedHeading } from '@nolebase/vitepress-plugin-hig
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import type { Options as NolebaseReadOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
-// import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 //-------------------------------------------------
 import './fonts/fonts.css'
@@ -20,6 +19,9 @@ import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import 'vitepress-plugin-codeblocks-fold/style/index.css'
 //-------------------------------------------------
 import Footer from './components/Footer.vue'
+import TypedInfo from './components/TypedInfo.vue'
+import Main from './components/Main.vue'
+import HeroImage from './components/HeroImage.vue'
 //-------------------------------------------------
 export default {
   extends: DefaultTheme,
@@ -30,33 +32,15 @@ export default {
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
       'layout-top': () => h(NolebaseHighlightTargetedHeading),
       'layout-bottom': () => h(Footer),
+      'home-hero-info-after': () => h(TypedInfo),
+      'home-hero-image': () => h(HeroImage)
     })
   },
 
   setup: () => {
-    const { frontmatter } = toRefs(useData());
+    const frontmatter = ref(useData());
     const route = useRoute();
     codeblocksFold({ route, frontmatter }, true, 400);
-    // giscusTalk({
-    //   repo: 'FrexCheat/DevBeginner-Doc',
-    //   repoId: 'R_kgDOL98EjA',
-    //   category: 'General',
-    //   categoryId: 'DIC_kwDOL98EjM4CgLTR',
-    //   mapping: 'pathname',
-    //   inputPosition: 'top',
-    //   lang: 'zh-CN',
-    //   locales: {
-    //     'zh-Hans': 'zh-CN',
-    //   },
-    //   homePageShowComment: false,
-    //   lightTheme: 'light',
-    //   darkTheme: 'transparent_dark',
-    // },
-    //   {
-    //     frontmatter, route
-    //   },
-    //   true
-    // );
   },
 
   enhanceApp({ app }) {
@@ -72,5 +56,6 @@ export default {
         }
       }
     } as NolebaseReadOptions);
+    app.component('MainComponent', Main);
   }
 } satisfies Theme

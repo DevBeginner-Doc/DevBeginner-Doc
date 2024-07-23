@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import { zh, search as zhSearch } from './zh.ts'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
+import { qqIcon } from '../theme/icons/svg-path'
 
 export default defineConfig({
   outDir: 'dist',
@@ -13,10 +14,11 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/svg/main-img.svg',
+    logo: '/svg/Logo_Thick.svg',
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' }
+      { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' },
+      { icon: { svg: qqIcon }, link: 'https://qm.qq.com/q/tY8pIKOT6w' }
     ],
 
     search: {
