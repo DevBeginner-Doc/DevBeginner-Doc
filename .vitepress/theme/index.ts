@@ -49,10 +49,10 @@ export default {
       layoutSwitch: {
         defaultMode: 5,
         contentLayoutMaxWidth: {
-          defaultMaxWidth: 90
+          defaultMaxWidth: 95
         },
         pageLayoutMaxWidth: {
-          defaultMaxWidth: 80
+          defaultMaxWidth: 90
         }
       }
     } as NolebaseReadOptions);
