@@ -47,3 +47,18 @@ jobs:
           ./dist => /root/caddy-sites/source/html-docs/
         last_ssh: |
           sudo systemctl reload caddy.service
+
+    - name: Deploy package to TreeHouse
+      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+      if: ${{ success() }}
+      with:
+        host: ${{ secrets.DC_HOST_CN }}
+        user: ${{ secrets.DC_USER }}
+        key: ${{ secrets.DC_PRIVATE_KEY }}
+        connect_timeout: 10s
+        first_ssh: |
+          sudo rm -rf /home/caddy-sites/source/doc/dist
+        scp: |
+          ./dist => /home/caddy-sites/source/doc/
+        last_ssh: |
+          sudo systemctl reload caddy.service
