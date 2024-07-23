@@ -49,7 +49,7 @@ function nav(): DefaultTheme.NavItem[] {
         { text: '首页', link: '/main' },
         { text: 'Hello 算法', link: 'https://www.hello-algo.com/' },
         { text: 'Oi Wiki', link: 'https://oi-wiki.org/' },
-        { text: 'ZZULI OJ', link: 'https://acm.zzuli.edu.cn/' },
+        { text: 'ZZULI OJ', link: 'http://acm.zzuli.edu.cn/' },
     ]
 }
 
