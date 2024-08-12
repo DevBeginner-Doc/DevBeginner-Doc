@@ -159,6 +159,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                         { text: '变量与运算符', link: '/Grammar-DataStructure/java/var-opt', },
                         { text: '数组', link: '/Grammar-DataStructure/java/array', },
                         { text: '多线程', link: '/Grammar-DataStructure/java/multithreading', },
+                        { text: '类与对象', link: '/Grammar-DataStructure/java/ClassAndObject', },
                     ]
                 },
             ]
