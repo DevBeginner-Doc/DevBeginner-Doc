@@ -355,3 +355,69 @@ class Communication implements Runnable {
     - 使用范围的不同：sleep()可以在任何需要使用的位置被调用； wait():必须使用在同步代码块或同步方法中
     - 都在同步结构中使用的时候，是否释放同步监视器的操作不同：sleep():不会释放同步监视器 ;wait():会释放同步监视器
     - 结束等待的方式不同：sleep()：指定时间一到就结束阻塞。 wait():可以指定时间也可以无限等待直到notify或notifyAll。
+
+
+## 7.通过Callable接口实现多线程
+`Callable`接口是`java.util.concurrent`包下的接口，它与`Runnable`接口类似，也是定义了一个`call()`方法，该方法返回一个`Object`对象。`Callable`接口的`call()`方法可以有返回值，并且可以抛出异常。
+
+### 7.1Runnable和Callable的区别:
+- 相比run()方法，可以有返回值
+- 方法可以抛出异常
+- 支持泛型的返回值（需要借助FutureTask类，获取返回结果）
+
+### 7.2相关接口和类
+1. Future接口
+ <br>　Future是一个接口,代表了一个异步计算的结果,接口中的方法用来检查计算是否完成,等待完成和得到计算结果;
+
+2. FutureTask类
+<br> FutureTask 同时实现了Runnable, Future接口。它既可以作为Runnable被线程执行，又可以作为Future得到Callable的返回值(FutureTask是Futrue接口的唯一的实现类)
+
+### 7.3 三者之间的关系
+<br>
+<img src="\images\Grammer-DataStructure\java\多线程2.png" >
+
+### 7.4 示例代码
+```java 
+//1.创建一个实现Callable的实现类
+class NumThread implements Callable {
+    //2.实现call方法，将此线程需要执行的操作声明在call()中
+    @Override
+    public Object call() throws Exception {
+        int sum = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+                sum += i;
+            }
+        }
+        return sum;
+    }
+}
+
+
+public class CallableTest {
+    public static void main(String[] args) {
+        //3.创建Callable接口实现类的对象
+        NumThread numThread = new NumThread();
+
+        //4.将此Callable接口实现类的对象作为传递到FutureTask构造器中，创建FutureTask的对象
+        FutureTask futureTask = new FutureTask(numThread);
+        //5.将FutureTask的对象作为参数传递到Thread类的构造器中，创建Thread对象，并调用start()
+        new Thread(futureTask).start();
+
+
+//      接收返回值
+        try {
+            //6.获取Callable中call方法的返回值
+            //get()返回值即为FutureTask构造器参数Callable实现类重写的call()的返回值。
+            Object sum = futureTask.get();
+            System.out.println("总和为：" + sum);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+```
