@@ -6,11 +6,11 @@
 import { onMounted, ref } from 'vue';
 
 const hostname = ref(undefined);
-const image = ref('/svg/Logo_Thick.svg');
+const image = ref('/DevBeginner-Doc/svg/Logo_Thick.svg');
 onMounted(() => {
     hostname.value = window.location.hostname;
     if (hostname.value === 'newbie.frexlink.com') {
-        image.value = '/svg/Logo_GLOBAL_Thick.svg';
+        image.value = '/DevBeginner-Doc/svg/Logo_GLOBAL_Thick.svg';
     }
 })
 </script>

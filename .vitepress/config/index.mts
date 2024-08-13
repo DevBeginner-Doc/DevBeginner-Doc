@@ -85,7 +85,7 @@ export default defineConfig({
     ],
     [
       'link',
-      { rel: 'icon', href: '/svg/main-img.svg' }
+      { rel: 'icon', href: '/DevBeginner-Doc/svg/main-img.svg' }
     ],
   ]
 })
