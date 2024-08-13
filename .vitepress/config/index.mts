@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
-import footnote from 'markdown-it-footnote'
-import { zh, search as zhSearch } from './zh.ts'
-import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
+import { zh, search as zhSearch } from './zh'
 import { qqIcon } from '../theme/icons/svg-path'
+import footnote from 'markdown-it-footnote'
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 export default defineConfig({
   outDir: 'dist',
