@@ -1,8 +1,11 @@
-name: Deploy Docs lastest to Server
+name: Deploy Docs lastest
 
 on:
   push:
     branches: [ "main" ]
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -33,17 +36,8 @@ jobs:
     - name: Build docs
       run: npm run docs:build --if-present
 
-    - name: Deploy package to ArkStation
-      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+    - name: Deploy docs to pages
+      uses: JamesIves/github-pages-deploy-action@v4
       if: ${{ success() }}
       with:
-        host: ${{ secrets.DC_HOST }}
-        user: ${{ secrets.DC_USER }}
-        key: ${{ secrets.DC_PRIVATE_KEY }}
-        connect_timeout: 10s
-        first_ssh: |
-          rm -rf /root/caddy-sites/source/html-docs/dist
-        scp: |
-          ./dist => /root/caddy-sites/source/html-docs/
-        last_ssh: |
-          sudo systemctl reload caddy.service
+        folder: dist
