@@ -8,6 +8,7 @@ export default defineConfig({
   outDir: 'dist',
   srcDir: 'docs',
   lastUpdated: true,
+  base: '/DevBeginner-Doc/',
 
   locales: {
     root: { label: "简体中文", ...zh }
