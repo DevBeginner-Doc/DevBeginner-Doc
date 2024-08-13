@@ -4,10 +4,6 @@ layout: home
 hero:
   name: "DevBeginner Doc"
   text: "面向编程初学者的帮助文档"
-  # tagline: Presented with ❤️ by ZZULI students.
-  # image:
-  #   src: /svg/Logo_Thick.svg
-  #   alt: DevBeginner-Doc
   actions:
     - theme: brand
       text: ✨进入主页
