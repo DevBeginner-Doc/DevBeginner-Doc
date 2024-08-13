@@ -288,3 +288,317 @@ public class Person {
 
 4. hashCode()
 - public int hashCode()：返回每个对象的hash值。
+
+## 5.类的成员-构造器
+**构造器（构造方法）是用于创建对象时初始化类的特殊方法。**
+
+`语法格式`
+```java
+[修饰符] class 类名{
+    [修饰符] 构造器名(){
+    // 实例初始化代码
+    }
+    [修饰符] 构造器名(参数列表){
+    // 实例初始化代码
+    }
+}
+```
+<h3>说明</h3> <br>
+
+- 构造器名必须与它所在的类名必须相同。
+- 它没有返回值，所以不需要返回值类型，也不需要void。
+- 构造器的修饰符只能是权限修饰符，不能被其他任何修饰。比如，不能被static、final、synchronized、abstract、native修饰，不能有return语句返回值。
+
+<h3>注意</h3> <br>
+
+- 当我们没有显式的声明类中的构造器时，系统会默认提供一个无参的构造器并且该构造器的修饰符默认与类的修饰符相同
+- 当我们显式的定义类的构造器以后，系统就不再提供默认的无参的构造器了。
+- 在类中，至少会存在一个构造器。
+- 构造器是可以重载的。
+
+`代码示例`
+```java
+public class Student {
+    private String name;
+    private int age;
+    // 无参构造
+    public Student() {}
+    // 有参构造
+    public Student(String n,int a) {
+        name = n;
+        age = a;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String n) {
+        name = n;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int a) {
+        age = a;
+    }
+    public String getInfo(){
+        return "姓名：" + name +"，年龄：" + age;
+    }
+}
+```
+
+```java
+public class TestStudent {
+    public static void main(String[] args) {
+        //调用无参构造创建学生对象
+        Student s1 = new Student();
+        //调用有参构造创建学生对象
+        Student s2 = new Student("张三",23);
+        System.out.println(s1.getInfo());
+        System.out.println(s2.getInfo());
+    }
+}
+```
+
+## 6.匿名对象
+- 我们也可以不定义对象的句柄，而直接调用这个对象的方法。这样的对象叫做匿名对象。如`new Person().shout();`
+- 使用场景：
+    - 如果一个对象只需要进行一次方法调用，那么就可以使用匿名对象。
+    - 我们经常将匿名对象作为实参传递给一个方法调用。
+
+## 7.类的成员-代码块
+- 代码块的作用：对Java类或对象进行初始化
+- 代码块的分类：
+    - 一个类中代码块若有修饰符，则只能被static修饰，称为静态代码块(static block)
+    - 没有使用static修饰的，为非静态代码块。
+
+### 7.1 语法格式
+```java
+[修饰符] class 类名{ 
+    [static] {
+        // [静态]代码块
+    }
+}
+```
+
+### 7.2 静态代码块的特点
+1. 可以有输出语句。
+
+  2. 可以对类的属性、类的声明进行初始化操作。
+
+  3. 不可以对非静态的属性初始化。即：不可以调用非静态的属性和方法。
+
+  4. 若有多个静态的代码块，那么按照从上到下的顺序依次执行。
+
+  5. 静态代码块的执行要先于非静态代码块。
+
+  6. 静态代码块随着类的加载而加载，且只执行一次。
+
+### 7.2 非静态代码块的特点
+1. 可以有输出语句。
+
+  2. 可以对类的属性、类的声明进行初始化操作。
+
+  3. 除了调用非静态的结构外，还可以调用静态的变量或方法。
+
+  4. 若有多个非静态的代码块，那么按照从上到下的顺序依次执行。
+
+  5. 每次创建对象的时候，都会执行一次。且先于构造器执行。
+
+## 8. 抽象类与抽象方法
+- 抽象类：被abstract修饰的类。
+- 抽象方法：被abstract修饰的没有方法体的方法。
+
+### 8.1 语法格式
+```java
+// 抽象类
+[权限修饰符] abstract class 类名{
+    
+}
+[权限修饰符] abstract class 类名 extends 父类{
+    
+}
+
+// 抽象方法
+[其他修饰符] abstract 返回值类型 方法名([形参列表]);
+/**
+ * 抽象方法没有方法体
+ */
+```
+
+### 8.2 抽象类的特点
+1. 抽象类**不能创建对象**，如果创建，编译无法通过而报错。只能创建其非抽象子类的对象。
+2. 抽象类中，也有构造方法，是供子类创建对象时，初始化父类成员变量使用的。
+3. 抽象类中，不一定包含抽象方法，但是有抽象方法的类必定是抽象类。
+4. 抽象类的子类，必须重写抽象父类中**所有的**抽象方法，否则，编译无法通过而报错。除非该子类也是抽象类。
+
+## 9. 枚举类
+
+### 9.1 枚举类概述
+- 枚举类型本质上也是一种类，只不过是这个类的对象是有限的、固定的几个，不能让用户随意创建。
+- 枚举类的例子：
+    - `星期`：Monday(星期一)......Sunday(星期天)
+    - `性别`：Man(男)、Woman(女)
+    - `月份`：January(1月)......December(12月)
+    - `季节`：Spring(春节)......Winter(冬天)
+    - `三原色`：red(红色)、green(绿色)、blue(蓝色)
+    - `支付方式`：Cash（现金）、WeChatPay（微信）、Alipay(支付宝)、BankCard(银行卡)、CreditCard(信用卡)
+    - `就职状态`：Busy(忙碌)、Free(空闲)、Vocation(休假)、Dimission(离职)
+    - `订单状态`：Nonpayment（未付款）、Paid（已付款）、Fulfilled（已配货）、Delivered（已发货）、Checked（已确认收货）、Return（退货）、Exchange（换货）、Cancel（取消）
+    - `线程状态`：创建、就绪、运行、阻塞、死亡
+### 9.2 语法格式
+`使用enum关键字进行声明`
+```java
+【修饰符】 enum 枚举类名{
+    常量对象列表
+}
+
+【修饰符】 enum 枚举类名{
+    常量对象列表;
+    
+    对象的实例变量列表;
+}
+```
+
+### 9.3 枚举类的特点
+* 枚举类的常量对象列表必须在枚举类的首行，因为是常量，所以建议大写。
+* 列出的实例系统会自动添加 public static final 修饰。
+* 如果常量对象列表后面没有其他代码，那么“；”可以省略，否则不可以省略“；”。
+* 编译器给枚举类默认提供的是private的无参构造，如果枚举类需要的是无参构造，就不需要声明，写常量对象列表时也不用加参数
+* 如果枚举类需要的是有参构造，需要手动定义，有参构造的private可以省略，调用有参构造的方法就是在常量对象名后面加(实参列表)就可以。
+* 枚举类默认继承的是java.lang.Enum类，因此不能再继承其他的类型。
+- 枚举类和普通java类一样，可以实现一个或多个接口
+
+## 10. 包装类
+**包装类是Java语言中用来封装基本数据类型的类。**
+
+- Java针对八种基本数据类型定义了相应的引用类型：包装类（封装类）。有了类的特点，才能调用类中的方法。
+-  <table>
+            <thead>
+                <tr>
+                    <th>基本数据类型</th>
+                    <th>对应包装类</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>byte</td>
+                    <td>Byte</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>Short</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>Integer</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>Long</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>Float</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>Double</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>Character</td>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>Boolean</td>
+                </tr>
+            </tbody>
+        </table>
+
+### 10.1 包装类与基本数据类型间的转换
+
+1. 装箱（把基本数据类型转为包装类对象）
+```java
+Integer obj1 = new Integer(4);//使用构造函数函数
+Float f = new Float(“4.56”);
+Long l = new Long(“asdf”);  //NumberFormatException
+
+Integer obj2 = Integer.valueOf(4);//使用包装类中的valueOf方法
+```
+2. 拆箱（把包装类对象转为基本数据类型）
+```java
+Integer obj = new Integer(4);
+int num1 = obj.intValue();
+```
+
+3. 自动装箱与拆箱：
+- 由于我们经常要做基本类型与包装类之间的转换，从`JDK5.0 `开始，基本类型与包装类的装箱、拆箱动作可以自动完成。
+
+### 10.2 基本数据类型、包装类与字符串间的转换
+1. 基本数据类型转为字符串
+```java
+//调用字符串重载的valueOf()方法
+int a = 10;
+//String str = a;//错误的
+
+String str = String.valueOf(a);
+
+//---------------------------------
+
+// 直接转换
+int a = 10;
+
+String str = a + "";
+```
+
+### 10.3字符串转为基本数据类型
+
+**方式1**：除了Character类之外，其他所有包装类都具有parseXxx静态方法可以将字符串参数转换为对应的基本类型，例如：
+
+* `public static int parseInt(String s)`：将字符串参数转换为对应的int基本类型。
+* `public static long parseLong(String s)`：将字符串参数转换为对应的long基本类型。
+* `public static double parseDouble(String s)`：将字符串参数转换为对应的double基本类型。
+
+**方式2**：字符串转为包装类，然后可以自动拆箱为基本数据类型
+
+* ```public static Integer valueOf(String s)```：将字符串参数转换为对应的Integer包装类，然后可以自动拆箱为int基本类型
+* ```public static Long valueOf(String s)```：将字符串参数转换为对应的Long包装类，然后可以自动拆箱为long基本类型
+* ```public static Double valueOf(String s)```：将字符串参数转换为对应的Double包装类，然后可以自动拆箱为double基本类型
+
+### 10.4 包装类的其它API
+
+1. 数据类型的最大最小值
+
+```java
+Integer.MAX_VALUE和Integer.MIN_VALUE
+    
+Long.MAX_VALUE和Long.MIN_VALUE
+    
+Double.MAX_VALUE和Double.MIN_VALUE
+```
+
+2. 字符转大小写
+
+```java
+Character.toUpperCase('x');
+
+Character.toLowerCase('X');
+```
+
+3. 整数转进制
+
+```java
+Integer.toBinaryString(int i) 
+    
+Integer.toHexString(int i)
+    
+Integer.toOctalString(int i)
+```
+
+4. 比较的方法
+
+```java
+Double.compare(double d1, double d2)
+    
+Integer.compare(int x, int y) 
+```
