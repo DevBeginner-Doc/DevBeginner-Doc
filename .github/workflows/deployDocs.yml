@@ -40,4 +40,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       if: ${{ success() }}
       with:
+        token: ${{ secrets.ACCESS_TOKEN }}
         folder: dist
+        branch: main
+        repository-name: DevBeginner-Doc/devbeginner-doc.github.io
