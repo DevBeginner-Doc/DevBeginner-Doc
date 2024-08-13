@@ -8,7 +8,6 @@ export default defineConfig({
   outDir: 'dist',
   srcDir: 'docs',
   lastUpdated: true,
-  base: '/DevBeginner-Doc/',
 
   locales: {
     root: { label: "简体中文", ...zh }
@@ -85,7 +84,7 @@ export default defineConfig({
     ],
     [
       'link',
-      { rel: 'icon', href: '/DevBeginner-Doc/svg/main-img.svg' }
+      { rel: 'icon', href: '/svg/main-img.svg' }
     ],
   ]
 })
