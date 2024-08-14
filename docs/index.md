@@ -13,10 +13,10 @@ hero:
       link: https://qm.qq.com/q/tY8pIKOT6w
     - theme: alt
       text: 😘协助我们
-      link: https://github.com/FrexCheat/DevBeginner-Doc/pulls
+      link: https://github.com/DevBeginner-Doc/DevBeginner-Doc/pulls
     - theme: alt
       text: 📝意见反馈
-      link: https://github.com/FrexCheat/DevBeginner-Doc/issues
+      link: https://github.com/DevBeginner-Doc/DevBeginner-Doc/issues
 
 features:
   - icon: 🙂

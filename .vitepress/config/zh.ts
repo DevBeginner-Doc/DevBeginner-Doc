@@ -13,7 +13,7 @@ export const zh = defineConfig({
         sidebar: sidebar(),
 
         editLink: {
-            pattern: 'https://github.com/FrexCheat/DevBeginner-Doc/edit/main/docs/:path',
+            pattern: 'https://github.com/DevBeginner-Doc/DevBeginner-Doc/edit/main/docs/:path',
             text: '在 GitHub 上编辑此页面'
         },
 
@@ -158,16 +158,17 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                         { text: '注释', link: '/Grammar-DataStructure/java/annotation', },
                         { text: '变量与运算符', link: '/Grammar-DataStructure/java/var-opt', },
                         { text: '数组', link: '/Grammar-DataStructure/java/array', },
-                        {text : '面向对象',
-                        collapsed: true,
-                        items:
-                        [
-                            { text: '概述&面向对象三特性', link: '/Grammar-DataStructure/java/OOP', },
-                            { text: '类与对象', link: '/Grammar-DataStructure/java/ClassAndObject', },
-                            { text: '关键字', link: '/Grammar-DataStructure/java/keyword',}
-                        ]
+                        {
+                            text: '面向对象',
+                            collapsed: true,
+                            items:
+                                [
+                                    { text: '概述&面向对象三特性', link: '/Grammar-DataStructure/java/OOP', },
+                                    { text: '类与对象', link: '/Grammar-DataStructure/java/ClassAndObject', },
+                                    { text: '关键字', link: '/Grammar-DataStructure/java/keyword', }
+                                ]
                         },
-                        
+
                         { text: '多线程', link: '/Grammar-DataStructure/java/multithreading', },
                     ]
                 },

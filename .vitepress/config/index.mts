@@ -17,7 +17,7 @@ export default defineConfig({
     logo: '/svg/Logo_Thick.svg',
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/FrexCheat/DevBeginner-Doc' },
+      { icon: 'github', link: 'https://github.com/DevBeginner-Doc/DevBeginner-Doc' },
       { icon: { svg: qqIcon }, link: 'https://qm.qq.com/q/tY8pIKOT6w' }
     ],
 
@@ -43,7 +43,7 @@ export default defineConfig({
   vite: {
     plugins: [
       GitChangelog({
-        repoURL: () => 'https://github.com/FrexCheat/DevBeginner-Doc',
+        repoURL: () => 'https://github.com/DevBeginner-Doc/DevBeginner-Doc',
       }),
       GitChangelogMarkdownSection({
         exclude: (id) => id.endsWith('index.md'),

@@ -10,4 +10,4 @@
 
 ## 写在最后
 
-由于语法基础内容过多且结构复杂，部分细节在初期可能无法顾及到，会在之后的更新中慢慢弥补缺漏，欢迎各位积极在 [QQ交流群](https://qm.qq.com/q/j2cMp91JUQ) 或 [文档仓库](https://github.com/FrexCheat/DevBeginner-Doc) 中提出问题和建议，我们会看到并选取合理的建议进行采纳。
+由于语法基础内容过多且结构复杂，部分细节在初期可能无法顾及到，会在之后的更新中慢慢弥补缺漏，欢迎各位积极在 [QQ交流群](https://qm.qq.com/q/j2cMp91JUQ) 或 [文档仓库](https://github.com/DevBeginner-Doc/DevBeginner-Doc) 中提出问题和建议，我们会看到并选取合理的建议进行采纳。
