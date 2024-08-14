@@ -24,7 +24,7 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 ### 本站下载
 
-点击此处下载
+[点击此处下载 || 密码：frbq](https://frexcheat.lanzoul.com/isxmE27ewt6b)
 
 ## 安装
 

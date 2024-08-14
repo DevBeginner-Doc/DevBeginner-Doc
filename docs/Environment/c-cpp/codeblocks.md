@@ -34,9 +34,9 @@ CodeBlocks又称为Code::Blocks，是一款开源的跨平台C/C++集成开发�
 
 ![Sourceforge-download2](/images/Environment/codeblocks/download/cdb-4.png)
 
-### 本站下载
+### 群内下载
 
-点击此处直接下载
+[点击此处加入群聊](https://qm.qq.com/q/tY8pIKOT6w)
 
 ## 安装
 
