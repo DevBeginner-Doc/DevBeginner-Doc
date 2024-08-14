@@ -14,6 +14,10 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 这篇文档将带大家熟悉VSCode的安装和配置（以Windows 11家庭中文版系统为例），并在VSCode里编译运行自己的第一个程序。
 
+## 视频教程
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112950274688145&bvid=BV17TYze7Ebd&cid=500001647384926&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## 下载
 
 ### 官网下载
