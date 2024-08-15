@@ -170,6 +170,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                         },
 
                         { text: '多线程', link: '/Grammar-DataStructure/java/multithreading', },
+                        { text: '线程池', link: '/Grammar-DataStructure/java/threadPoll', },
                     ]
                 },
             ]
