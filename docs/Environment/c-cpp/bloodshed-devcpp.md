@@ -22,7 +22,7 @@ Dev-C++ 是轻量级的 C/C++ IDE 。它集成了GNU的GCC、G++编译器以及G
 
 ### 本站下载
 
-[点击此处下载 || 密码：dx48](https://frexcheat.lanzoul.com/iGV2w27etyvi)
+[点击此处下载](/download)
 
 ## 安装
 

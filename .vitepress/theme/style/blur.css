@@ -1,0 +1,60 @@
+:root {
+    .VPNavBar {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+    }
+
+    .VPNavBar:not(.home) {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+    }
+
+    @media (min-width: 960px) {
+        .VPNavBar:not(.home) {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+        }
+
+        .VPNavBar:not(.has-sidebar):not(.home.top) {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    @media (min-width: 960px) {
+        .VPNavBar:not(.home.top) .content-body {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+        }
+
+        .VPNavBar:not(.has-sidebar):not(.home.top) .content-body {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    @media (min-width: 960px) {
+        .VPNavBar:not(.home.top) .divider-line {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+        }
+
+        .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    .DocSearch-Button {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+    }
+
+    .VPLocalNav {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+        /* 隐藏分割线 */
+        /* border-bottom: 5px solid var(--vp-c-gutter); */
+        border-bottom: 0px;
+    }
+}

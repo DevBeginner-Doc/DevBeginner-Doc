@@ -16,7 +16,7 @@ Visual Studio 分为**社区版**、**专业版**、**企业版**。作为初学
 
 ### 本站下载
 
-[点击此处下载 || 密码：b5e0](https://frexcheat.lanzoul.com/iAA0H27evdcf)
+[点击此处下载](/download)
 
 ## 安装
 

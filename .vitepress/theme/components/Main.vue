@@ -1,49 +1,54 @@
 <template>
-    <div class="card-main">
-        <!-- 公告标题 -->
-        <div class="card-title">
-            <svg t="1723538554269" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                p-id="1502" width="26" height="26">
-                <path
-                    d="M694.368 117.28a67.957333 67.957333 0 0 1 10.336 36.021333v717.408a67.957333 67.957333 0 0 1-103.978667 57.632L326.026667 756.650667H180.48A95.146667 95.146667 0 0 1 85.333333 661.504V362.506667a95.146667 95.146667 0 0 1 95.146667-95.146667h145.546667L600.725333 95.68a67.957333 67.957333 0 0 1 93.653334 21.610667z m120.330667 133.525333a32 32 0 0 1 44.533333 8.042667 443.114667 443.114667 0 0 1 0.117333 506.133333 32 32 0 0 1-52.586666-36.458666 379.114667 379.114667 0 0 0-0.106667-433.184 32 32 0 0 1 8.042667-44.533334z"
-                    fill="currentColor" p-id="1503"></path>
-            </svg>
-            <strong style="font-size: 1.3rem;">公告</strong>
-        </div>
-        <!-- 公告内容 -->
-        <div style="padding-left: 15px;">
-            <ul style="font-size: 1rem;">
-                <li>
-                    本文档基于
-                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-                        CC BY-NC-SA 4.0(Creative Commons Attribution-ShareAlike 4.0)
-                    </a>开源协议，内容转载请标明出处。
-                </li>
-                <li>
-                    校内授权 QQ 群聊：
-                    <a href="https://qm.qq.com/q/DZcC4JhnP4" target="_blank">
-                        148518259(24级C语言交流群)
-                    </a>、
-                    <a href="https://qm.qq.com/q/L58jzI8P6y" target="_blank">
-                        980609672(轻大开发交流群)
-                    </a>、
-                    <a href="https://qm.qq.com/q/kpNAnQDRle" target="_blank">
-                        834896850(软院萌新学术交流群)
-                    </a>，群内包含文档官方机器人，可以帮你实时获取文档信息。啊，也可以带你玩一些好玩的（）
-                </li>
-                <li>
-                    文档持续更新中 🚀，任何文档内容问题欢迎到文档仓库提交 issues 或 pr，或者进入以上校内授权群聊进行反馈，当然，你也可以发送邮件至 admin@frexlink.com 告知我们。
-                </li>
-                <li>
-                    想要加入文档的编写？当然！你可以通过向文档仓库提交 pr 来帮助我们完善文档内容，你也可以在授权群聊内联系或@管理员来申请仓库的 push 权限。期待大家的到来！
-                </li>
-                <li>
-                    如果你现在或者未来有意向在 GitHub 上帮助完善此文档的内容，我们希望你在此之前已经了解了 vitepress 文档的基本结构和编写步骤以及 Git 和 GitHub 的使用基础。
-                </li>
-                <li>
-                    CalDav 订阅将于近期开放，请耐心等待。
-                </li>
-            </ul>
+    <div class="main-container">
+        <div class="card-main">
+            <!-- 公告标题 -->
+            <div class="card-title">
+                <svg t="1723538554269" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1502" width="26" height="26">
+                    <path
+                        d="M694.368 117.28a67.957333 67.957333 0 0 1 10.336 36.021333v717.408a67.957333 67.957333 0 0 1-103.978667 57.632L326.026667 756.650667H180.48A95.146667 95.146667 0 0 1 85.333333 661.504V362.506667a95.146667 95.146667 0 0 1 95.146667-95.146667h145.546667L600.725333 95.68a67.957333 67.957333 0 0 1 93.653334 21.610667z m120.330667 133.525333a32 32 0 0 1 44.533333 8.042667 443.114667 443.114667 0 0 1 0.117333 506.133333 32 32 0 0 1-52.586666-36.458666 379.114667 379.114667 0 0 0-0.106667-433.184 32 32 0 0 1 8.042667-44.533334z"
+                        fill="currentColor" p-id="1503"></path>
+                </svg>
+                <strong style="font-size: 1.3rem;">公告</strong>
+            </div>
+            <!-- 公告内容 -->
+            <div style="padding-left: 15px;">
+                <ul style="font-size: 1rem;">
+                    <li>
+                        本文档基于
+                        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                            CC BY-NC-SA 4.0(Creative Commons Attribution-ShareAlike 4.0)
+                        </a>开源协议，内容转载请标明出处。
+                    </li>
+                    <li>
+                        校内授权 QQ 群聊：
+                        <a href="https://qm.qq.com/q/DZcC4JhnP4" target="_blank">
+                            148518259(24级C语言交流群)
+                        </a>、
+                        <a href="https://qm.qq.com/q/L58jzI8P6y" target="_blank">
+                            980609672(轻大开发交流群)
+                        </a>、
+                        <a href="https://qm.qq.com/q/kpNAnQDRle" target="_blank">
+                            834896850(软院萌新学术交流群)
+                        </a>，群内包含文档官方机器人，可以帮你实时获取文档信息。啊，也可以带你玩一些好玩的（）
+                    </li>
+                    <li>
+                        文档持续更新中 🚀，任何文档内容问题欢迎到文档仓库提交 issues 或 pr，或者进入以上校内授权群聊进行反馈，当然，你也可以发送邮件至 admin@frexlink.com 告知我们。
+                    </li>
+                    <li>
+                        想要加入文档的编写？当然！你可以通过向文档仓库提交 pr 来帮助我们完善文档内容，你也可以在授权群聊内联系或@管理员来申请仓库的 push 权限。期待大家的到来！
+                    </li>
+                    <li>
+                        如果你现在或者未来有意向在 GitHub 上帮助完善此文档的内容，我们希望你在此之前已经了解了 vitepress 文档的基本结构和编写步骤以及 Git 和 GitHub 的使用基础。
+                    </li>
+                    <li>
+                        ✨✨ 资源下载站点已经完成初步部署，你可以在右上角导航中进入下载页面 ✨✨
+                    </li>
+                    <li>
+                        CalDav 订阅将于近期开放，请耐心等待。
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- 校内比赛卡片 -->
@@ -362,6 +367,34 @@ onMounted(() => {
     text-decoration-line: underline;
 }
 
+.main-container {
+    margin-bottom: 40px;
+    z-index: -1;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-size: contain;
+    background-image: conic-gradient(from var(--border-gradient-angle) at 50% 50%, transparent, #00e1ff 20%, #00eeff 20%, #d400ff 30%, transparent 17%);
+    animation: buttonBorderSpin 6s linear infinite 0ms;
+}
+
+@property --border-gradient-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+@keyframes buttonBorderSpin {
+    0% {
+        --border-gradient-angle: 0turn;
+    }
+
+    100% {
+        --border-gradient-angle: 1turn;
+    }
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -378,7 +411,9 @@ onMounted(() => {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 30px;
+    background: var(--vp-c-bg);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .card-title {

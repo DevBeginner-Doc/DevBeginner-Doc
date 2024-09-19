@@ -47,6 +47,7 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
     return [
         { text: '首页', link: '/main' },
+        { text: '资源下载', link: '/download' },
         { text: 'Hello 算法', link: 'https://www.hello-algo.com/' },
         { text: 'Oi Wiki', link: 'https://oi-wiki.org/' },
         { text: 'ZZULI OJ', link: 'http://acm.zzuli.edu.cn/' },
