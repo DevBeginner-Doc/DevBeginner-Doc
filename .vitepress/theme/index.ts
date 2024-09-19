@@ -11,7 +11,8 @@ import { InjectionKey as NolebaseReadInjectionKey } from '@nolebase/vitepress-pl
 import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 //-------------------------------------------------
 import './fonts/fonts.css'
-import './style.css'
+import './style/index.css'
+import './style/vp-code.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
@@ -22,6 +23,7 @@ import Footer from './components/Footer.vue'
 import TypedInfo from './components/TypedInfo.vue'
 import Main from './components/Main.vue'
 import HeroImage from './components/HeroImage.vue'
+import Download from './components/Download.vue'
 //-------------------------------------------------
 export default {
   extends: DefaultTheme,
@@ -57,5 +59,6 @@ export default {
       }
     } as NolebaseReadOptions);
     app.component('MainComponent', Main);
+    app.component('DownloadComponent', Download);
   }
 } satisfies Theme

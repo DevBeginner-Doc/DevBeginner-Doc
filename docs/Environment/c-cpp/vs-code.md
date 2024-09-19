@@ -15,8 +15,13 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 这篇文档将带大家熟悉VSCode的安装和配置（以Windows 11家庭中文版系统为例），并在VSCode里编译运行自己的第一个程序。
 
 ## 视频教程
-
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112950274688145&bvid=BV17TYze7Ebd&cid=500001647384926&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe 
+style="width:100%; aspect-ratio:16/9; margin-top: 2em;" 
+src="//player.bilibili.com/player.html?isOutside=true&aid=112950274688145&bvid=BV17TYze7Ebd&cid=500001647384926&p=1" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen>
+</iframe>
 
 ## 下载
 
@@ -28,7 +33,7 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 ### 本站下载
 
-[点击此处下载 || 密码：frbq](https://frexcheat.lanzoul.com/isxmE27ewt6b)
+[点击此处下载](/download)
 
 ## 安装
 
@@ -81,7 +86,9 @@ Visual Studio Code（简称 VSCode 或 VSC）是由微软开发的开源、免�
 
 **“...你说得对，但是怎么安装呢？”**
 
-首先下载[MSYS2](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe)的安装程序。
+首先下载MSYS2的安装程序。
+
+[点击此处下载](/download)
 
 **“...MSYS2？那又是什么？”**
 
