@@ -134,3 +134,6 @@ dist
 
 # npm package-lock
 package-lock.json
+
+# pnpm package-lock
+pnpm-lock.yaml

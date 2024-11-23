@@ -9,7 +9,7 @@ const hostname = ref(undefined);
 const image = ref('/svg/Logo_Thick.svg');
 onMounted(() => {
     hostname.value = window.location.hostname;
-    if (hostname.value === 'newbie.frexlink.com') {
+    if (hostname.value.includes('com')) {
         image.value = '/svg/Logo_GLOBAL_Thick.svg';
     }
 })
